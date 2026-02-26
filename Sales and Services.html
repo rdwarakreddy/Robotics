@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Computer Services &amp; Sales | UniFirst Robotics</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1a227a",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#121320",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased min-h-screen">
+    <!-- Top Navigation Bar -->
+    <header class="fixed top-0 w-full z-50 glass-nav border-b border-slate-200/10 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+
+                <!-- Logo -->
+                <div class="flex items-center gap-3">
+                    <div class="bg-primary p-1.5 rounded-lg text-white">
+                        <span class="material-symbols-outlined text-2xl leading-none">
+                            precision_manufacturing
+                        </span>
+                    </div>
+                    <span class="text-xl font-extrabold tracking-tight">
+                        UniFirst <span class="text-primary">Robotics</span>
+                    </span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center gap-8">
+
+                    <a class="block px-4 py-2 text-sm hover:bg-gray-100 rounded-md hover:font-bold  text-primary"
+                        href="HomePage.html">
+                        Home
+                    </a>
+
+                    <a class="block px-4 py-2 text-sm hover:bg-gray-100 rounded-md hover:font-bold  text-primary"
+                        href="About Us.html">
+                        About Us
+                    </a>
+
+                    <a class="block px-4 py-2 text-sm hover:bg-gray-100 rounded-md hover:font-bold  text-primary"
+                        href="Courses.html">
+                        Courses
+                    </a>
+
+                    <!-- Dropdown -->
+                    <div class="relative group">
+                        <button
+                            class="block px-4 py-2 text-sm hover:bg-gray-100 rounded-md hover:font-bold  text-primary">
+                            Our Offerings
+                            <span class="material-symbols-outlined text-sm">expand_more</span>
+                        </button>
+
+                        <div class="absolute left-0 mt-2 w-64 bg-white border rounded-lg shadow-lg p-2 
+                                opacity-0 invisible group-hover:opacity-100 group-hover:visible 
+                                transition-all duration-200">
+
+                            <a class="block px-4 py-2 text-sm hover:bg-gray-100 rounded-md hover:font-bold  text-primary"
+                                href="Courses.html">
+                                Courses
+                            </a>
+
+                            <a class="block px-4 py-2 text-sm hover:bg-gray-100 rounded-md hover:font-bold  text-primary"
+                                href="Lab Setup.html">
+                                Lab Setup
+                            </a>
+
+                            <a class="block px-4 py-2 text-sm hover:bg-gray-100 rounded-md hover:font-bold  text-primary"
+                                href="Computer Sales and Services.html">
+                                Computer Sales and Services
+                            </a>
+
+                            <a class="block px-4 py-2 text-sm hover:bg-gray-100 rounded-md hover:font-bold  text-primary"
+                                href="Study Abroad.html">
+                                Study Abroad
+                            </a>
+
+                            <a class="block px-4 py-2 text-sm hover:bg-gray-100 rounded-md hover:font-bold  text-primary"
+                                href="Workshops School Program.html">
+                                Workshops School Program
+                            </a>
+                        </div>
+                    </div>
+
+                    <a class="block px-4 py-2 text-sm hover:bg-gray-100 rounded-md hover:font-bold  text-primary"
+                        href="#">
+                        Contact Us
+                    </a>
+
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="menu-btn" class="text-gray-700 focus:outline-none">
+                        <span class="material-symbols-outlined text-3xl">menu</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-4 py-4 space-y-3">
+
+                <a href="HomePage.html" class="block text-sm font-medium hover:text-primary hover:font-bold  text-primary">
+                    Home
+                </a>
+
+                <a href="About Us.html" class="block text-sm font-medium hover:text-primary hover:font-bold  text-primary">
+                    About Us
+                </a>
+
+                <a href="Courses.html" class="block text-sm font-medium hover:text-primary hover:font-bold  text-primary">
+                    Courses
+                </a>
+
+                <!-- Mobile Dropdown -->
+                <div>
+                    <button onclick="toggleDropdown()"
+                        class="w-full flex justify-between items-center text-sm font-medium hover:text-primary hover:font-bold  text-primary">
+                        Our Offerings
+                        <span class="material-symbols-outlined text-sm">expand_more</span>
+                    </button>
+
+                    <div id="mobile-dropdown" class="hidden mt-2 ml-4 space-y-2">
+                        <a href="Courses.html" class="block text-sm hover:text-primary hover:font-bold  text-primary">Courses</a>
+                        <a href="Lab Setup.html" class="block text-sm hover:text-primary hover:font-bold  text-primary">Lab Setup</a>
+                        <a href="Computer Sales and Services.html" class="block text-sm hover:text-primary hover:font-bold  text-primary">Computer
+                            Sales and Services</a>
+                        <a href="Study Abroad.html" class="block text-sm hover:text-primary hover:font-bold  text-primary">Study
+                            Abroad</a>
+                        <a href="Workshops School Program.html" class="block text-sm hover:text-primary hover:font-bold  text-primary">Workshops
+                            School Program</a>
+                    </div>
+                </div>
+
+                <a href="Contact Us.html" class="block text-sm font-medium hover:text-primary hover:font-bold  text-primary">
+                    Contact Us
+                </a>
+
+            </div>
+        </div>
+    </header>
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- Hero Section -->
+        <section class="relative overflow-hidden rounded-xl mb-12 bg-slate-900">
+            <div class="absolute inset-0 opacity-40">
+                <img class="w-full h-full object-cover" data-alt="Close up of a blue glowing computer circuit board"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNfQDKAY5_jhFYd9FvMobSolSvRqrDsJ2kXehPXFR7rE63T57ExS6pwwGZg3U6UuXrLD9R32QpzpAQNcO3DGy7ztlUCRnXpbS-Snd5UR6Dm7xewqyn5lpyY6-AjOPgMpj5VPmEu7rA2RNcyUDMgjGPuu3keFfs8RQ17tpmKDZTtLE1CIhOFHIK_eBeKaeSSwaBOskJWI3SKPJ7HfeuIbTaiqI5KMO8R7VCt-RmpvHPGPIZASqtDCgVniwyn7bN5u88UYeRj7GVr-w2" />
+            </div>
+            <div
+                class="relative z-10 p-8 md:p-16 flex flex-col items-start justify-center min-h-[320px] bg-gradient-to-r from-slate-900 via-slate-900/80 to-transparent">
+                <span
+                    class="inline-block px-3 py-1 rounded-full bg-primary/20 text-primary text-xs font-bold uppercase tracking-wider mb-4 border border-primary/30">Professional
+                    IT Solutions</span>
+                <h2 class="text-3xl md:text-5xl font-bold text-white mb-4 leading-tight">Advanced Hardware Services
+                    <br />&amp; Sales Ecosystem</h2>
+                <p class="text-slate-300 max-w-xl text-lg mb-8 leading-relaxed">From high-performance robot controllers
+                    to bulk institutional laptop fleets. We repair, lease, and sell the technology that powers your
+                    innovation.</p>
+                <div class="flex gap-4">
+                    <button class="bg-primary text-white px-6 py-3 rounded-lg font-bold flex items-center gap-2">
+                        <span class="material-symbols-outlined">calendar_today</span> Book Repair
+                    </button>
+                    <button
+                        class="bg-slate-800/80 hover:bg-slate-700 text-white px-6 py-3 rounded-lg font-bold backdrop-blur-sm transition-colors border border-slate-700">
+                        View Inventory
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!-- Professional IT Services -->
+        <section class="mb-16">
+            <div class="flex items-center justify-between mb-8">
+                <div>
+                    <h3 class="text-2xl font-bold dark:text-white flex items-center gap-2">
+                        <span class="material-symbols-outlined text-primary">terminal</span> Computer Services
+                    </h3>
+                    <p class="text-slate-500 dark:text-slate-400 mt-1">Specialized technical labor and maintenance for
+                        critical infrastructure.</p>
+                </div>
+                <a class="text-primary font-semibold text-sm hover:underline" href="#">Full Service Menu →</a>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Repair Card -->
+                <div
+                    class="bg-white dark:bg-slate-800/50 p-6 rounded-xl border border-slate-200 dark:border-slate-800 group hover:border-primary/50 transition-all shadow-sm">
+                    <div
+                        class="bg-primary/10 w-12 h-12 rounded-lg flex items-center justify-center text-primary mb-5 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-2xl">build</span>
+                    </div>
+                    <h4 class="text-lg font-bold mb-3 dark:text-white">Hardware Repair</h4>
+                    <ul class="space-y-2 mb-6 text-sm text-slate-600 dark:text-slate-400">
+                        <li class="flex items-center gap-2"><span
+                                class="material-symbols-outlined text-xs text-primary">check_circle</span> Component
+                            Level Diagnostics</li>
+                        <li class="flex items-center gap-2"><span
+                                class="material-symbols-outlined text-xs text-primary">check_circle</span> Screen &amp;
+                            Shell Replacements</li>
+                        <li class="flex items-center gap-2"><span
+                                class="material-symbols-outlined text-xs text-primary">check_circle</span> Advanced
+                            Logic Board Repair</li>
+                    </ul>
+                    <button
+                        class="w-full py-2.5 rounded-lg border border-slate-200 dark:border-slate-700 text-sm font-bold dark:text-white hover:bg-primary hover:text-white transition-colors">Start
+                        Diagnostics</button>
+                </div>
+                <!-- Printer Card -->
+                <div
+                    class="bg-white dark:bg-slate-800/50 p-6 rounded-xl border border-slate-200 dark:border-slate-800 group hover:border-primary/50 transition-all shadow-sm">
+                    <div
+                        class="bg-primary/10 w-12 h-12 rounded-lg flex items-center justify-center text-primary mb-5 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-2xl">print</span>
+                    </div>
+                    <h4 class="text-lg font-bold mb-3 dark:text-white">Printer Services</h4>
+                    <ul class="space-y-2 mb-6 text-sm text-slate-600 dark:text-slate-400">
+                        <li class="flex items-center gap-2"><span
+                                class="material-symbols-outlined text-xs text-primary">check_circle</span> Enterprise
+                            Network Configuration</li>
+                        <li class="flex items-center gap-2"><span
+                                class="material-symbols-outlined text-xs text-primary">check_circle</span> Maintenance
+                            &amp; Ink Contracts</li>
+                        <li class="flex items-center gap-2"><span
+                                class="material-symbols-outlined text-xs text-primary">check_circle</span> Precision
+                            Parts Replacement</li>
+                    </ul>
+                    <button
+                        class="w-full py-2.5 rounded-lg border border-slate-200 dark:border-slate-700 text-sm font-bold dark:text-white hover:bg-primary hover:text-white transition-colors">Manage
+                        Fleet</button>
+                </div>
+                <!-- Maintenance Card -->
+                <div
+                    class="bg-white dark:bg-slate-800/50 p-6 rounded-xl border border-slate-200 dark:border-slate-800 group hover:border-primary/50 transition-all shadow-sm">
+                    <div
+                        class="bg-primary/10 w-12 h-12 rounded-lg flex items-center justify-center text-primary mb-5 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-2xl">speed</span>
+                    </div>
+                    <h4 class="text-lg font-bold mb-3 dark:text-white">System Optimization</h4>
+                    <ul class="space-y-2 mb-6 text-sm text-slate-600 dark:text-slate-400">
+                        <li class="flex items-center gap-2"><span
+                                class="material-symbols-outlined text-xs text-primary">check_circle</span> OS Hardening
+                            &amp; Optimization</li>
+                        <li class="flex items-center gap-2"><span
+                                class="material-symbols-outlined text-xs text-primary">check_circle</span> Deep
+                            Malware/Virus Removal</li>
+                        <li class="flex items-center gap-2"><span
+                                class="material-symbols-outlined text-xs text-primary">check_circle</span> Thermal
+                            Repasting &amp; Cleaning</li>
+                    </ul>
+                    <button
+                        class="w-full py-2.5 rounded-lg border border-slate-200 dark:border-slate-700 text-sm font-bold dark:text-white hover:bg-primary hover:text-white transition-colors">Schedule
+                        Cleanup</button>
+                </div>
+            </div>
+        </section>
+        <!-- Sales & Rentals Grid -->
+        <section class="mb-16">
+            <div class="flex items-center justify-between mb-8">
+                <div>
+                    <h3 class="text-2xl font-bold dark:text-white flex items-center gap-2">
+                        <span class="material-symbols-outlined text-primary">shopping_cart</span> Sales &amp; Rentals
+                    </h3>
+                    <p class="text-slate-500 dark:text-slate-400 mt-1">Certified hardware solutions for projects and
+                        permanent setup.</p>
+                </div>
+                <div class="flex gap-2">
+                    <button
+                        class="bg-slate-100 dark:bg-slate-800 p-2 rounded-lg hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">
+                        <span class="material-symbols-outlined">filter_list</span>
+                    </button>
+                    <button
+                        class="bg-slate-100 dark:bg-slate-800 p-2 rounded-lg hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">
+                        <span class="material-symbols-outlined">grid_view</span>
+                    </button>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product 1: Rentals -->
+                <div
+                    class="bg-white dark:bg-slate-800 overflow-hidden rounded-xl border border-slate-200 dark:border-slate-800 flex flex-col shadow-sm hover:shadow-xl transition-shadow">
+                    <div class="relative h-56 bg-slate-100 dark:bg-slate-900 overflow-hidden">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform"
+                            data-alt="Modern sleek laptop on a clean workspace"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmuhUC-2ShE1ES8wHQsuD9vEbsT9DfPaR2tnzUg0oM2ijvqVPS0pJZQsBTj6NjP6Sd5yMLRWE14JzbLwd6Ux4Pzmxf4eRPsfKXOo6SocGW9gXTA8TMCU4TogaGLL2Krt9enmkQLvaKNPLOXfa9NhlcEkSD3poIBrL3LQtnKI3P3123nvsGx1eOX42GoIGMWdNGDX54_ualISQwfAY2MucqXD4aPtXhLLbuIJr-GO26fiAOK7--zXNYW7x0ZWxK9ZBqhnAzcEQc_GJA" />
+                        <div
+                            class="absolute top-4 left-4 bg-primary text-white text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-widest">
+                            Rental Available</div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-1">
+                        <div class="flex justify-between items-start mb-2">
+                            <h5 class="text-lg font-bold dark:text-white">Precision Z1 Rental Fleet</h5>
+                            <span class="text-primary font-bold">from $89/wk</span>
+                        </div>
+                        <p class="text-sm text-slate-500 dark:text-slate-400 mb-6 line-clamp-2">Ideal for temporary
+                            event labs or short-term data analysis projects. Includes full tech support.</p>
+                        <div class="mt-auto flex gap-3">
+                            <button class="flex-1 bg-primary text-white py-2 rounded-lg text-sm font-bold">Reserve
+                                Now</button>
+                            <button
+                                class="px-3 border border-slate-200 dark:border-slate-700 rounded-lg dark:text-slate-400">
+                                <span class="material-symbols-outlined text-sm">visibility</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 2: Refurbished -->
+                <div
+                    class="bg-white dark:bg-slate-800 overflow-hidden rounded-xl border border-slate-200 dark:border-slate-800 flex flex-col shadow-sm hover:shadow-xl transition-shadow">
+                    <div class="relative h-56 bg-slate-100 dark:bg-slate-900 overflow-hidden">
+                        <img class="w-full h-full object-cover" data-alt="Refurbished laptop with keyboard backlight on"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB51eGtf1vSAUk-4eT578YglU9G6UoSWcmpHpdHOTbV1kEUEP9Pa2w1t_S0QMq8vC_jFmKo470JNgQoMNsy6WwvDZh7oLhUIMZhRZsZchmMBhXZmVCbM2zzkU4TwPYiz0iEAP3Cz3Vxn346-U_XFxoBgywm0G9G5JbY-SlYF877s6VTqe6IYKqDfimIqRpFnbpS6liS7vKon2La9AfVRCuIC5UmuYAVGqCM8Zm8GzGwnGfYxVqWiNmvnKrRRK2rYxZwZ2zi5hiLWLIn" />
+                        <div
+                            class="absolute top-4 left-4 bg-emerald-600 text-white text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-widest">
+                            Certified Refurbished</div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-1">
+                        <div class="flex justify-between items-start mb-2">
+                            <h5 class="text-lg font-bold dark:text-white">MasterPro G4 Refurbished</h5>
+                            <span class="text-primary font-bold">$749.00</span>
+                        </div>
+                        <p class="text-sm text-slate-500 dark:text-slate-400 mb-6 line-clamp-2">Enterprise-grade
+                            performance at consumer prices. 12-month robotics warranty included.</p>
+                        <div class="mt-auto flex gap-3">
+                            <button class="flex-1 bg-primary text-white py-2 rounded-lg text-sm font-bold">Buy
+                                Now</button>
+                            <button
+                                class="px-3 border border-slate-200 dark:border-slate-700 rounded-lg dark:text-slate-400">
+                                <span class="material-symbols-outlined text-sm">visibility</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Institutional Sales Block -->
+                <div
+                    class="bg-primary/5 dark:bg-primary/10 p-8 rounded-xl border-2 border-dashed border-primary/30 flex flex-col items-center justify-center text-center">
+                    <div class="bg-primary w-16 h-16 rounded-full flex items-center justify-center text-white mb-6">
+                        <span class="material-symbols-outlined text-3xl">corporate_fare</span>
+                    </div>
+                    <h4 class="text-xl font-bold dark:text-white mb-2">Institutional &amp; Bulk</h4>
+                    <p class="text-sm text-slate-500 dark:text-slate-400 mb-8 max-w-[240px]">Equip entire computer labs,
+                        schools, or robotics centers with tiered volume pricing.</p>
+                    <button
+                        class="w-full py-3 bg-primary text-white rounded-lg font-bold shadow-lg shadow-primary/30">Get
+                        Custom Quote</button>
+                    <p class="text-[10px] uppercase text-primary font-bold mt-4 tracking-tighter italic">24-Hour
+                        Proposal Turnaround</p>
+                </div>
+            </div>
+        </section>
+        <!-- Trust Signals / Footer Callout -->
+        <section
+            class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16 border-y border-slate-200 dark:border-slate-800 py-12">
+            <div class="text-center">
+                <div class="text-primary mb-2"><span class="material-symbols-outlined text-3xl">verified_user</span>
+                </div>
+                <p class="text-sm font-bold dark:text-white">Certified Techs</p>
+                <p class="text-xs text-slate-500">Expertise guaranteed</p>
+            </div>
+            <div class="text-center">
+                <div class="text-primary mb-2"><span class="material-symbols-outlined text-3xl">history</span></div>
+                <p class="text-sm font-bold dark:text-white">Quick Turnaround</p>
+                <p class="text-xs text-slate-500">48hr standard repair</p>
+            </div>
+            <div class="text-center">
+                <div class="text-primary mb-2"><span class="material-symbols-outlined text-3xl">package_2</span></div>
+                <p class="text-sm font-bold dark:text-white">Global Shipping</p>
+                <p class="text-xs text-slate-500">Secure hardware transit</p>
+            </div>
+            <div class="text-center">
+                <div class="text-primary mb-2"><span class="material-symbols-outlined text-3xl">headset_mic</span></div>
+                <p class="text-sm font-bold dark:text-white">Lifetime Support</p>
+                <p class="text-xs text-slate-500">For all bulk clients</p>
+            </div>
+        </section>
+        <!-- FAQ Section / Bottom CTA -->
+        <div class="bg-slate-900 rounded-xl p-8 md:p-12 text-center text-white relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10">
+                <img class="w-full h-full object-cover" data-alt="Abstract cybersecurity binary code background"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDK4p0mgHMCrmMXm3bI1WUypSmiO6Q9Cmb3XFzqVoY3nR9-rkY-E85XGjo6m0nbwIN0f7sQEy_I34nRcJpW67cHIV_pzhpn-bYmPORTg65NB0FiDsOCbRGDOemUxMi8qY9J9bpZk3NQB3zpcJjxVBMnykWTtkOhXGO-J1pDgl-DxLgo5DD7jO5tfmyeznLSe7HVIxmTkC8xV81H68oSPqoTBIqVEMbuzEKFkOyYym-wqkTsi3AyYwlhvLXg558po8OzoDeEJLjmAS8i" />
+            </div>
+            <div class="relative z-10">
+                <h3 class="text-2xl font-bold mb-4">Don't see exactly what you need?</h3>
+                <p class="text-slate-400 max-w-2xl mx-auto mb-8">Our hardware experts can source specific robotics
+                    components, custom workstation builds, and long-term leasing contracts tailored to your budget.</p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <button
+                        class="bg-white text-slate-900 px-8 py-3 rounded-lg font-bold hover:bg-slate-200 transition-colors">Chat
+                        with an Expert</button>
+                    <button
+                        class="bg-primary px-8 py-3 rounded-lg font-bold hover:bg-primary/90 transition-colors">Contact
+                        Support</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Simple Footer -->
+    <footer class="bg-white dark:bg-background-dark border-t border-slate-200 dark:border-slate-800 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                <div class="flex items-center gap-3">
+                    <div class="bg-primary/20 p-1.5 rounded text-primary flex items-center justify-center">
+                        <span class="material-symbols-outlined text-xl">precision_manufacturing</span>
+                    </div>
+                    <span class="text-lg font-bold dark:text-white tracking-tight">UniFirst Robotics</span>
+                </div>
+                <div class="flex gap-8">
+                    <a class="text-sm text-slate-500 hover:text-primary transition-colors" href="#">Privacy Policy</a>
+                    <a class="text-sm text-slate-500 hover:text-primary transition-colors" href="#">Service Terms</a>
+                    <a class="text-sm text-slate-500 hover:text-primary transition-colors" href="#">Warranty Info</a>
+                </div>
+                <p class="text-sm text-slate-400">© 2024 UniFirst Robotics. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const menuBtn = document.getElementById("menu-btn");
+            const mobileMenu = document.getElementById("mobile-menu");
+
+            menuBtn.addEventListener("click", function () {
+                mobileMenu.classList.toggle("hidden");
+            });
+
+        });
+
+        function toggleDropdown() {
+            document.getElementById("mobile-dropdown").classList.toggle("hidden");
+        }
+    </script>
+</body>
+
+</html>

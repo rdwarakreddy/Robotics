@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>UniFirst Robotics - Schools &amp; Curriculum</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1a227a",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#0b0e14",
+                        "surface-dark": "#161b22",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(rgba(11, 14, 20, 0.8), rgba(11, 14, 20, 0.95)), url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=1000');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display transition-colors duration-300">
+    <!-- Top Navigation -->
+    <header class="fixed top-0 w-full z-50 glass-nav border-b border-slate-200/10 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+
+                <!-- Logo -->
+                <div class="flex items-center gap-3">
+                    <div class="bg-primary p-1.5 rounded-lg text-white">
+                        <span class="material-symbols-outlined text-2xl leading-none">
+                            precision_manufacturing
+                        </span>
+                    </div>
+                    <span class="text-xl font-extrabold tracking-tight">
+                        UniFirst <span class="text-primary">Robotics</span>
+                    </span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center gap-8">
+
+                    <a class="block px-4 py-2 text-sm hover:bg-gray-100 rounded-md hover:font-bold  text-primary"
+                        href="HomePage.html">
+                        Home
+                    </a>
+
+                    <a class="block px-4 py-2 text-sm hover:bg-gray-100 rounded-md hover:font-bold  text-primary"
+                        href="About Us.html">
+                        About Us
+                    </a>
+
+                    <a class="block px-4 py-2 text-sm hover:bg-gray-100 rounded-md hover:font-bold  text-primary"
+                        href="Courses.html">
+                        Courses
+                    </a>
+
+                    <!-- Dropdown -->
+                    <div class="relative group">
+                        <button
+                            class="block px-4 py-2 text-sm hover:bg-gray-100 rounded-md hover:font-bold  text-primary">
+                            Our Offerings
+                            <span class="material-symbols-outlined text-sm">expand_more</span>
+                        </button>
+
+                        <div class="absolute left-0 mt-2 w-64 bg-white border rounded-lg shadow-lg p-2 
+                                opacity-0 invisible group-hover:opacity-100 group-hover:visible 
+                                transition-all duration-200">
+
+                            <a class="block px-4 py-2 text-sm hover:bg-gray-100 rounded-md hover:font-bold  text-primary"
+                                href="Courses.html">
+                                Courses
+                            </a>
+
+                            <a class="block px-4 py-2 text-sm hover:bg-gray-100 rounded-md hover:font-bold  text-primary"
+                                href="Lab Setup.html">
+                                Lab Setup
+                            </a>
+
+                            <a class="block px-4 py-2 text-sm hover:bg-gray-100 rounded-md hover:font-bold  text-primary"
+                                href="Computer Sales and Services.html">
+                                Computer Sales and Services
+                            </a>
+
+                            <a class="block px-4 py-2 text-sm hover:bg-gray-100 rounded-md hover:font-bold  text-primary"
+                                href="Study Abroad.html">
+                                Study Abroad
+                            </a>
+
+                            <a class="block px-4 py-2 text-sm hover:bg-gray-100 rounded-md hover:font-bold  text-primary"
+                                href="Workshops School Program.html">
+                                Workshops School Program
+                            </a>
+                        </div>
+                    </div>
+
+                    <a class="block px-4 py-2 text-sm hover:bg-gray-100 rounded-md hover:font-bold  text-primary"
+                        href="#">
+                        Contact Us
+                    </a>
+
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="menu-btn" class="text-gray-700 focus:outline-none">
+                        <span class="material-symbols-outlined text-3xl">menu</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-4 py-4 space-y-3">
+
+                <a href="HomePage.html" class="block text-sm font-medium hover:text-primary hover:font-bold  text-primary">
+                    Home
+                </a>
+
+                <a href="About Us.html" class="block text-sm font-medium hover:text-primary hover:font-bold  text-primary">
+                    About Us
+                </a>
+
+                <a href="Courses.html" class="block text-sm font-medium hover:text-primary hover:font-bold  text-primary">
+                    Courses
+                </a>
+
+                <!-- Mobile Dropdown -->
+                <div>
+                    <button onclick="toggleDropdown()"
+                        class="w-full flex justify-between items-center text-sm font-medium hover:text-primary hover:font-bold  text-primary">
+                        Our Offerings
+                        <span class="material-symbols-outlined text-sm">expand_more</span>
+                    </button>
+
+                    <div id="mobile-dropdown" class="hidden mt-2 ml-4 space-y-2">
+                        <a href="Courses.html" class="block text-sm hover:text-primary hover:font-bold  text-primary">Courses</a>
+                        <a href="Lab Setup.html" class="block text-sm hover:text-primary hover:font-bold  text-primary">Lab Setup</a>
+                        <a href="Computer Sales and Services.html" class="block text-sm hover:text-primary hover:font-bold  text-primary">Computer
+                            Sales and Services</a>
+                        <a href="Study Abroad.html" class="block text-sm hover:text-primary hover:font-bold  text-primary">Study
+                            Abroad</a>
+                        <a href="Workshops School Program.html" class="block text-sm hover:text-primary hover:font-bold  text-primary">Workshops
+                            School Program</a>
+                    </div>
+                </div>
+
+                <a href="Contact Us.html" class="block text-sm font-medium hover:text-primary hover:font-bold  text-primary">
+                    Contact Us
+                </a>
+
+            </div>
+        </div>
+    </header>
+    <main>
+        <!-- Hero Section -->
+        <section class="relative hero-gradient min-h-[70vh] flex items-center justify-center text-center px-4"
+            data-alt="Futuristic robotics lab with students working">
+            <div class="max-w-4xl mx-auto">
+                <span
+                    class="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest uppercase bg-primary/20 text-primary border border-primary/30 rounded-full">Educational
+                    Excellence</span>
+                <h1 class="text-4xl md:text-6xl font-black leading-tight mb-6 text-white tracking-tight">
+                    Empowering Schools with <br /><span class="text-primary">Advanced Robotics</span>
+                </h1>
+                <p class="text-lg md:text-xl text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed">
+                    Comprehensive STEM curriculum, teacher certification, and hands-on laboratory setup designed for the
+                    next generation of engineers.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a class="px-8 py-4 bg-primary text-white font-bold rounded-lg hover:scale-105 transition-transform flex items-center justify-center gap-2"
+                        href="#curriculum">
+                        Explore Curriculum <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    </a>
+                    <a class="px-8 py-4 bg-white/10 text-white font-bold rounded-lg hover:bg-white/20 backdrop-blur-sm transition-all border border-white/20"
+                        href="#partner">
+                        Request a Demo
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- Robotics Curriculum Section -->
+        <section class="py-24 px-4 bg-background-light dark:bg-background-dark" id="curriculum">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">World-Class Curriculum</h2>
+                    <p class="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">A structured path from foundational
+                        STEM principles to advanced artificial intelligence and machine learning.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Grade 1-5 -->
+                    <div
+                        class="group bg-white dark:bg-surface-dark p-8 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all shadow-sm">
+                        <div
+                            class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                            <span class="material-symbols-outlined text-3xl">rocket_launch</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">STEM Basics</h3>
+                        <p class="text-sm font-semibold text-primary mb-4 uppercase tracking-wider">Grades 1-5</p>
+                        <p class="text-slate-600 dark:text-slate-400 mb-6">Foundational principles of mechanics, simple
+                            machines, and logical thinking through playful discovery.</p>
+                        <ul class="space-y-3 text-sm text-slate-500 dark:text-slate-400">
+                            <li class="flex items-center gap-2"><span
+                                    class="material-symbols-outlined text-primary text-sm">check_circle</span> Intro to
+                                Mechanics</li>
+                            <li class="flex items-center gap-2"><span
+                                    class="material-symbols-outlined text-primary text-sm">check_circle</span> Visual
+                                Block Programming</li>
+                            <li class="flex items-center gap-2"><span
+                                    class="material-symbols-outlined text-primary text-sm">check_circle</span> Basic
+                                Circuitry</li>
+                        </ul>
+                    </div>
+                    <!-- Grade 6-9 -->
+                    <div
+                        class="group bg-white dark:bg-surface-dark p-8 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all shadow-sm">
+                        <div
+                            class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                            <span class="material-symbols-outlined text-3xl">settings_input_component</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">LEGO &amp; VEX Integration</h3>
+                        <p class="text-sm font-semibold text-primary mb-4 uppercase tracking-wider">Grades 6-9</p>
+                        <p class="text-slate-600 dark:text-slate-400 mb-6">Hands-on engineering using industry-standard
+                            platforms to solve real-world competitive challenges.</p>
+                        <ul class="space-y-3 text-sm text-slate-500 dark:text-slate-400">
+                            <li class="flex items-center gap-2"><span
+                                    class="material-symbols-outlined text-primary text-sm">check_circle</span> Sensor
+                                Integration</li>
+                            <li class="flex items-center gap-2"><span
+                                    class="material-symbols-outlined text-primary text-sm">check_circle</span>
+                                Competitive Robotics</li>
+                            <li class="flex items-center gap-2"><span
+                                    class="material-symbols-outlined text-primary text-sm">check_circle</span>
+                                Engineering Design Process</li>
+                        </ul>
+                    </div>
+                    <!-- Grade 10-12 -->
+                    <div
+                        class="group bg-white dark:bg-surface-dark p-8 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all shadow-sm">
+                        <div
+                            class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                            <span class="material-symbols-outlined text-3xl">psychology</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">AI &amp; Coding Tracks</h3>
+                        <p class="text-sm font-semibold text-primary mb-4 uppercase tracking-wider">Grades 10-12</p>
+                        <p class="text-slate-600 dark:text-slate-400 mb-6">Advanced programming in Python and C++,
+                            focusing on machine learning and autonomous navigation.</p>
+                        <ul class="space-y-3 text-sm text-slate-500 dark:text-slate-400">
+                            <li class="flex items-center gap-2"><span
+                                    class="material-symbols-outlined text-primary text-sm">check_circle</span> Python
+                                for Robotics</li>
+                            <li class="flex items-center gap-2"><span
+                                    class="material-symbols-outlined text-primary text-sm">check_circle</span> Computer
+                                Vision Basics</li>
+                            <li class="flex items-center gap-2"><span
+                                    class="material-symbols-outlined text-primary text-sm">check_circle</span> IoT &amp;
+                                Smart Systems</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Teacher Training Section -->
+        <section class="py-24 px-4 bg-slate-100 dark:bg-slate-900/50" id="training">
+            <div class="max-w-7xl mx-auto">
+                <div class="flex flex-col lg:flex-row items-center gap-16">
+                    <div class="flex-1">
+                        <div class="relative">
+                            <div class="absolute -top-4 -left-4 w-24 h-24 bg-primary/20 rounded-full blur-2xl"></div>
+                            <img alt="Teacher training session"
+                                class="rounded-xl shadow-2xl relative z-10 w-full object-cover aspect-[4/3]"
+                                data-alt="Teacher facilitating a robotics workshop"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUCT-38ihzGZVNwEzJqGxz8RrCMuR_RpxuSGIqgJ2isjhBF2AQAEkQzKlmcdqexRxPLBVS6ij9ZaLebozKm6UGNTq8gsxZL9Bfk_wpoYu7086QnM6BXOvisj9G4B2l9Yotbse4ic_yY8DV9METb3zH1bAT-TI-3zXpW5LWpGmAC5xSuXUVm2_Ume0jU9X5R-CxvcOjGLKdNk27wjx5VWtktedXaJAc4R6CV_bH7JKJoCC-sRi7kN3EWi3WjFuiS80wzX0x15cH1BjV" />
+                            <div
+                                class="absolute -bottom-6 -right-6 bg-primary p-6 rounded-lg text-white z-20 hidden md:block">
+                                <p class="text-3xl font-bold">500+</p>
+                                <p class="text-xs uppercase tracking-widest font-semibold opacity-80">Certified
+                                    Educators</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-1">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-6">Expert Teacher <br /><span
+                                class="text-primary">Certification Programs</span></h2>
+                        <p class="text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
+                            We don't just provide the tools; we empower your educators to lead with confidence. Our
+                            comprehensive training ensures that every teacher is a master of the robotics lab.
+                        </p>
+                        <div class="space-y-6">
+                            <div class="flex gap-4">
+                                <div
+                                    class="shrink-0 w-10 h-10 bg-primary/10 text-primary rounded-full flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-xl">verified</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Global Certification</h4>
+                                    <p class="text-sm text-slate-500 dark:text-slate-400">Internationally recognized
+                                        STEM teaching credentials for your staff.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div
+                                    class="shrink-0 w-10 h-10 bg-primary/10 text-primary rounded-full flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-xl">menu_book</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Ready-to-Use Lesson Plans</h4>
+                                    <p class="text-sm text-slate-500 dark:text-slate-400">Turnkey curriculum modules
+                                        including slides, assessments, and projects.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div
+                                    class="shrink-0 w-10 h-10 bg-primary/10 text-primary rounded-full flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-xl">support_agent</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">24/7 Technical Support</h4>
+                                    <p class="text-sm text-slate-500 dark:text-slate-400">Direct access to our
+                                        engineering team for troubleshooting and guidance.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button
+                            class="mt-10 px-8 py-3 bg-primary text-white font-bold rounded-lg hover:shadow-lg transition-all">Download
+                            Training Brochure</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Activity Gallery Grid -->
+        <section class="py-24 px-4" id="gallery">
+            <div class="max-w-7xl mx-auto">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+                    <div>
+                        <h2 class="text-3xl font-bold mb-2">Robotics in Action</h2>
+                        <p class="text-slate-600 dark:text-slate-400">See how schools are transforming education with
+                            UniFirst Robotics.</p>
+                    </div>
+                    <div class="flex gap-2">
+                        <button
+                            class="p-2 border border-slate-200 dark:border-slate-800 rounded hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+                            <span class="material-symbols-outlined">chevron_left</span>
+                        </button>
+                        <button
+                            class="p-2 border border-slate-200 dark:border-slate-800 rounded hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+                            <span class="material-symbols-outlined">chevron_right</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="group relative overflow-hidden rounded-xl aspect-square">
+                        <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                            data-alt="Students working on a robot"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuByKv9laMANQE-qjMLXyMVLWcYIs2CJR0PSc4g5t3qylgmYtwR32usJ459T65u2sNSeAD-O6uIuFVaBgs6sIwSQa0lRi3ZetQAK_1LQG_jN51FcSX3SehAtS8FhuuHzP8pfVsvzKsEmrBtXjXFRfvgecg1EXGOFZ_lSwV6MKF_wV4_NVTdiKW4qFpmrJLnz3i6vieagOMqIkMs_A03IQbxk7wx9G40rrNSLFGxPYNdSRaEWWOlFgE_3dTmNIwHj1i-HjO5HdC6faIF2" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-background-dark/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                            <p class="text-white text-sm font-bold">Innovation Lab 2024</p>
+                        </div>
+                    </div>
+                    <div class="group relative overflow-hidden rounded-xl aspect-square md:col-span-2">
+                        <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                            data-alt="Classroom robotics workshop"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEpqAGgYgjfuwerUmcYPQVV_B0lyZhxQ8e6RYnFMEENlKzRJZjI-vY153GyRp9D5FFv2goaImSme4BGG7Ss9WSoIsxB3kJQrcWkJWHBzvWBeOjUmZNBhzYSAr0FP0WyHgC9XlnJyTOSat665ivU-niDrNDnIQVW3pX0Km-bhl9DTM161UpTdsemYi_Q_wPApiEnFvuh-6DGCdPpvCRFdBHfCmM0gqf2GjzwBzw7Xh2HrN_JDp5uMU3JxOqPPF6_s9a0nnmNWB7fsPb" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-background-dark/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                            <p class="text-white text-sm font-bold">National Robotics Championship</p>
+                        </div>
+                    </div>
+                    <div class="group relative overflow-hidden rounded-xl aspect-square">
+                        <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                            data-alt="Close up of robot electronic parts"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnxldR8smorZIaC57lL0lSfXdUTYgw06n1PWJ8Ge4krMtf_wzoNnq84EEvoiSEKQTS_47jrQdDLWpebIGmJjQKGdTowx5pRwLQjmJn53Ib0e1_FignzK7RMMB4NrP4NaMLpIbJYi33Gu04UYG_BSnpIPqFwVs66Qgc6Gj9_WEBKGxCxIgHTRmjboU1R1YGCqCZ4guLII8bto4KnAVKGbx8raQDTw13gfvXT2xfoTqIOP2oDQlRmVSuHM7ThAchxe5m4ugTJVildnK-" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-background-dark/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                            <p class="text-white text-sm font-bold">Coding Workshops</p>
+                        </div>
+                    </div>
+                    <div class="group relative overflow-hidden rounded-xl aspect-square md:col-span-2">
+                        <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                            data-alt="Student operating a laptop and robot"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSPIIUR_KZiYeBSztyTcT_b4QXB3cd4NfdzAxzOxj3fv4lAD59sHd8BYfkxpQJCPK3TbVCk-h2ZtZhl-9Lz6V6IUyxIwedoUJe_85aKExFZW0MJDe8-QKtRBtw8IYGFvVWSKW1Im_L6eo_NCiFo26cyb7wU0GrcXzIa68bGIVF5LYnCTS6yIs2bN8J6WvFUc5PmdeIDnLDUaKYd4jywNV4uY-OyeIrYyyr-pcqdYWL4SgTb15xmw_Xp_e9N185jTkGtoTBC-tWeLkj" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-background-dark/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                            <p class="text-white text-sm font-bold">AI Programming Track</p>
+                        </div>
+                    </div>
+                    <div class="group relative overflow-hidden rounded-xl aspect-square">
+                        <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                            data-alt="Hands-on learning experience"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDadJuPcKExHmdu8lPY04Z-tJMxv5T6aOi5_6XtpAU59p-m8VIO9U2nQHRISlFQJpDNY-G2H3pSq251grtStwRQ7aUizBZ4MK5nVrpA_PxLIdP81gvq7qjMwEIs3-ICirnxTacV2ALhg-I9skOedINAtR173YO9u9M4ip-yxbhSt1j7VP_5Fjw6m-vQf8BMvrzRVJ_CibFVlhsjTHYCPwSvCKZA1aRB5kx3ETs4mQquXyc04r-zFOcLLMB8e3vBHyXy1S9N3MeMABUs" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-background-dark/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                            <p class="text-white text-sm font-bold">Elementary STEM Basics</p>
+                        </div>
+                    </div>
+                    <div class="group relative overflow-hidden rounded-xl aspect-square">
+                        <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                            data-alt="Team collaboration in robotics"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGLKsgDu4HLIpuRR4fQ1Egny1Ui92a9NrhfsMT4Vlp6VnZcD3XAdAQnqclsyoZSUvCcnt4d1dgNrrX4RAaz01ZzvmBPIQVc7n2_MJjF4bVsA2saYT2BDvaQrVR74oFSRdqiuFXVnwlTy-JM3EI5EVtCnILdJ_ZBPgPto5JGS2y6gpbtfsxypFn8Wuv4ATwG0lw3Im0U14McVTuZn8vvlyAu6UghEHeUqT2UtzKxrovH-i7t6pvX1nuqSxJU04XLjIR5urJieWiyIPS" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-background-dark/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                            <p class="text-white text-sm font-bold">Collaborative Engineering</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Partner With Us CTA Section -->
+        <section class="py-24 px-4 relative overflow-hidden" id="partner">
+            <div class="absolute inset-0 bg-primary/5 dark:bg-primary/10"></div>
+            <div class="max-w-5xl mx-auto relative z-10">
+                <div
+                    class="bg-white dark:bg-surface-dark rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-800 overflow-hidden flex flex-col md:flex-row">
+                    <div class="md:w-5/12 bg-primary p-12 text-white flex flex-col justify-center">
+                        <h2 class="text-3xl font-bold mb-6">Partner With Us</h2>
+                        <p class="mb-8 text-white/80 leading-relaxed">Join hundreds of elite schools worldwide.
+                            Transform your STEM department with a customized robotics program tailored to your students'
+                            needs.</p>
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-white/60">location_on</span>
+                                <span class="text-sm">Global Headquarters, London</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-white/60">mail</span>
+                                <span class="text-sm">partnerships@unifirst.edu</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-white/60">call</span>
+                                <span class="text-sm">+1 (555) 123-4567</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-7/12 p-12">
+                        <form class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div class="sm:col-span-2">
+                                <label class="block text-sm font-bold mb-2">School Name</label>
+                                <input
+                                    class="w-full px-4 py-3 bg-slate-50 dark:bg-background-dark border border-slate-200 dark:border-slate-800 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
+                                    placeholder="Greenwood International School" type="text" />
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold mb-2">Contact Person</label>
+                                <input
+                                    class="w-full px-4 py-3 bg-slate-50 dark:bg-background-dark border border-slate-200 dark:border-slate-800 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
+                                    placeholder="John Doe" type="text" />
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold mb-2">Email Address</label>
+                                <input
+                                    class="w-full px-4 py-3 bg-slate-50 dark:bg-background-dark border border-slate-200 dark:border-slate-800 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
+                                    placeholder="john@school.edu" type="email" />
+                            </div>
+                            <div class="sm:col-span-2">
+                                <label class="block text-sm font-bold mb-2">Number of Students</label>
+                                <select
+                                    class="w-full px-4 py-3 bg-slate-50 dark:bg-background-dark border border-slate-200 dark:border-slate-800 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all appearance-none">
+                                    <option>Less than 100</option>
+                                    <option>100 - 500</option>
+                                    <option>500 - 1000</option>
+                                    <option>1000+</option>
+                                </select>
+                            </div>
+                            <div class="sm:col-span-2">
+                                <label class="block text-sm font-bold mb-2">Message</label>
+                                <textarea
+                                    class="w-full px-4 py-3 bg-slate-50 dark:bg-background-dark border border-slate-200 dark:border-slate-800 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
+                                    placeholder="How can we help your school?" rows="4"></textarea>
+                            </div>
+                            <div class="sm:col-span-2">
+                                <button
+                                    class="w-full py-4 bg-primary text-white font-bold rounded-lg hover:bg-primary/90 transition-all shadow-lg hover:shadow-primary/20"
+                                    type="submit">Submit Partnership Request</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-background-dark border-t border-slate-200 dark:border-slate-800 py-12 px-4">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="flex items-center gap-3">
+                <div class="text-primary">
+                    <span class="material-symbols-outlined text-3xl">precision_manufacturing</span>
+                </div>
+                <h2 class="text-xl font-bold">UniFirst <span class="text-primary">Robotics</span></h2>
+            </div>
+            <div class="flex gap-8 text-sm text-slate-500 dark:text-slate-400">
+                <a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+                <a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+                <a class="hover:text-primary transition-colors" href="#">Documentation</a>
+                <a class="hover:text-primary transition-colors" href="#">Support</a>
+            </div>
+            <p class="text-xs text-slate-500 dark:text-slate-400">© 2024 UniFirst Robotics. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const menuBtn = document.getElementById("menu-btn");
+            const mobileMenu = document.getElementById("mobile-menu");
+
+            menuBtn.addEventListener("click", function () {
+                mobileMenu.classList.toggle("hidden");
+            });
+
+        });
+
+        function toggleDropdown() {
+            document.getElementById("mobile-dropdown").classList.toggle("hidden");
+        }
+    </script>
+</body>
+
+</html>

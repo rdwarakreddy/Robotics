@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>UniFirst Robotics - Course Catalog</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1a227a",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#121320",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen font-display">
+    <div class="relative flex flex-col min-h-screen w-full overflow-x-hidden">
+        <!-- Header / Navigation -->
+       <header class="fixed top-0 w-full z-50 glass-nav border-b border-slate-200/10 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+
+                <!-- Logo -->
+                <div class="flex items-center gap-3">
+                    <div class="bg-primary p-1.5 rounded-lg text-white">
+                        <span class="material-symbols-outlined text-2xl leading-none">
+                            precision_manufacturing
+                        </span>
+                    </div>
+                    <span class="text-xl font-extrabold tracking-tight">
+                        UniFirst <span class="text-primary">Robotics</span>
+                    </span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center gap-8">
+
+                    <a class="block px-4 py-2 text-sm hover:bg-gray-100 rounded-md hover:font-bold  text-primary"
+                        href="HomePage.html">
+                        Home
+                    </a>
+
+                    <a class="block px-4 py-2 text-sm hover:bg-gray-100 rounded-md hover:font-bold  text-primary"
+                        href="About Us.html">
+                        About Us
+                    </a>
+
+                    <a class="block px-4 py-2 text-sm hover:bg-gray-100 rounded-md hover:font-bold  text-primary"
+                        href="Courses.html">
+                        Courses
+                    </a>
+
+                    <!-- Dropdown -->
+                    <div class="relative group">
+                        <button
+                            class="block px-4 py-2 text-sm hover:bg-gray-100 rounded-md hover:font-bold  text-primary">
+                            Our Offerings
+                            <span class="material-symbols-outlined text-sm">expand_more</span>
+                        </button>
+
+                        <div class="absolute left-0 mt-2 w-64 bg-white border rounded-lg shadow-lg p-2 
+                                opacity-0 invisible group-hover:opacity-100 group-hover:visible 
+                                transition-all duration-200">
+
+                            <a class="block px-4 py-2 text-sm hover:bg-gray-100 rounded-md hover:font-bold  text-primary"
+                                href="Courses.html">
+                                Courses
+                            </a>
+
+                            <a class="block px-4 py-2 text-sm hover:bg-gray-100 rounded-md hover:font-bold  text-primary"
+                                href="Lab Setup.html">
+                                Lab Setup
+                            </a>
+
+                            <a class="block px-4 py-2 text-sm hover:bg-gray-100 rounded-md hover:font-bold  text-primary"
+                                href="Computer Sales and Services.html">
+                                Computer Sales and Services
+                            </a>
+
+                            <a class="block px-4 py-2 text-sm hover:bg-gray-100 rounded-md hover:font-bold  text-primary"
+                                href="Study Abroad.html">
+                                Study Abroad
+                            </a>
+
+                            <a class="block px-4 py-2 text-sm hover:bg-gray-100 rounded-md hover:font-bold  text-primary"
+                                href="Workshops School Program.html">
+                                Workshops School Program
+                            </a>
+                        </div>
+                    </div>
+
+                    <a class="block px-4 py-2 text-sm hover:bg-gray-100 rounded-md hover:font-bold  text-primary"
+                        href="#">
+                        Contact Us
+                    </a>
+
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="menu-btn" class="text-gray-700 focus:outline-none">
+                        <span class="material-symbols-outlined text-3xl">menu</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-4 py-4 space-y-3">
+
+                <a href="HomePage.html" class="block text-sm font-medium hover:text-primary hover:font-bold  text-primary">
+                    Home
+                </a>
+
+                <a href="About Us.html" class="block text-sm font-medium hover:text-primary hover:font-bold  text-primary">
+                    About Us
+                </a>
+
+                <a href="Courses.html" class="block text-sm font-medium hover:text-primary hover:font-bold  text-primary">
+                    Courses
+                </a>
+
+                <!-- Mobile Dropdown -->
+                <div>
+                    <button onclick="toggleDropdown()"
+                        class="w-full flex justify-between items-center text-sm font-medium hover:text-primary hover:font-bold  text-primary">
+                        Our Offerings
+                        <span class="material-symbols-outlined text-sm">expand_more</span>
+                    </button>
+
+                    <div id="mobile-dropdown" class="hidden mt-2 ml-4 space-y-2">
+                        <a href="Courses.html" class="block text-sm hover:text-primary hover:font-bold  text-primary">Courses</a>
+                        <a href="Lab Setup.html" class="block text-sm hover:text-primary hover:font-bold  text-primary">Lab Setup</a>
+                        <a href="Computer Sales and Services.html" class="block text-sm hover:text-primary hover:font-bold  text-primary">Computer
+                            Sales and Services</a>
+                        <a href="Study Abroad.html" class="block text-sm hover:text-primary hover:font-bold  text-primary">Study
+                            Abroad</a>
+                        <a href="Workshops School Program.html" class="block text-sm hover:text-primary hover:font-bold  text-primary">Workshops
+                            School Program</a>
+                    </div>
+                </div>
+
+                <a href="Contact Us.html" class="block text-sm font-medium hover:text-primary hover:font-bold  text-primary">
+                    Contact Us
+                </a>
+
+            </div>
+        </div>
+    </header>
+        <main class="flex-1 px-6 md:px-16 lg:px-40 py-8">
+            <!-- Breadcrumbs -->
+            <nav class="flex items-center gap-2 text-sm mb-8 text-slate-500 dark:text-slate-400">
+                <a class="hover:text-primary transition-colors" href="#">Home</a>
+                <span class="material-symbols-outlined text-xs">chevron_right</span>
+                <a class="hover:text-primary transition-colors" href="#">Academic Programs</a>
+                <span class="material-symbols-outlined text-xs">chevron_right</span>
+                <span class="text-slate-900 dark:text-slate-100 font-medium">Robotics Engineering Courses</span>
+            </nav>
+            <!-- Page Title Section -->
+            <div class="mb-10 flex flex-col md:flex-row md:items-end justify-between gap-6">
+                <div class="max-w-2xl">
+                    <h2 class="text-4xl font-extrabold text-slate-900 dark:text-white mb-3 tracking-tight">Robotics
+                        Engineering Courses</h2>
+                    <p class="text-lg text-slate-600 dark:text-slate-400">Advance your career with our specialized
+                        robotics curriculum and hands-on technical modules designed by industry experts.</p>
+                </div>
+                <div class="flex items-center gap-3">
+                    <span class="text-sm font-medium text-slate-500 dark:text-slate-400">Sort by:</span>
+                    <button
+                        class="flex items-center gap-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-3 py-2 rounded-lg text-sm font-medium shadow-sm">
+                        Popularity
+                        <span class="material-symbols-outlined text-sm">expand_more</span>
+                    </button>
+                </div>
+            </div>
+            <!-- Filters Bar -->
+            <div class="flex flex-wrap items-center gap-3 mb-10 pb-6 border-b border-slate-200 dark:border-slate-800">
+                <button class="bg-primary text-white px-4 py-2 rounded-lg text-sm font-medium flex items-center gap-2">
+                    <span class="material-symbols-outlined text-sm">apps</span> All Levels
+                </button>
+                <button
+                    class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 px-4 py-2 rounded-lg text-sm font-medium hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors flex items-center gap-2">
+                    <span class="material-symbols-outlined text-sm">signal_cellular_alt_1_bar</span> Beginner
+                </button>
+                <button
+                    class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 px-4 py-2 rounded-lg text-sm font-medium hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors flex items-center gap-2">
+                    <span class="material-symbols-outlined text-sm">signal_cellular_alt_2_bar</span> Intermediate
+                </button>
+                <button
+                    class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 px-4 py-2 rounded-lg text-sm font-medium hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors flex items-center gap-2">
+                    <span class="material-symbols-outlined text-sm">signal_cellular_alt</span> Advanced
+                </button>
+                <div class="h-6 w-px bg-slate-300 dark:bg-slate-700 mx-2 hidden sm:block"></div>
+                <button
+                    class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 px-4 py-2 rounded-lg text-sm font-medium hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors flex items-center gap-2">
+                    <span class="material-symbols-outlined text-sm">filter_list</span> More Filters
+                </button>
+            </div>
+            <!-- Courses Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8">
+                <!-- Course Card 1 -->
+                <div
+                    class="bg-white dark:bg-slate-800/40 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col group hover:shadow-xl hover:shadow-primary/5 transition-all duration-300">
+                    <div class="relative h-48 overflow-hidden">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            data-alt="Close up of high-tech robotic arm"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxKGN8rauhiPGoHRMWU2FOxp24ONwN7ZczR_gKuShzT1iv5_n69rISQ93ZaVZwGvf3Srza5mbu3yq9B57zddzKJWfx2Hv2HVm3QfG3Fc2oFLreyckKxpxpXiHv9KmcVe6rERyKSQDWT3q00U1SmANhfryaRzzu1-wc4hoV_L4vNPh8e5QLV6zKM4squUi0nT3eLJNzuOX-43oiEfuf_Gv0G5GAH7yKyu5ZZD51q589ykXvPxYXs_WW64yN9dPPS89ehv4rnModj_aW" />
+                        <div
+                            class="absolute top-3 right-3 bg-primary/90 text-white text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded backdrop-blur-sm">
+                            Intermediate</div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-1">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="flex items-center gap-1 text-slate-500 dark:text-slate-400 text-xs">
+                                <span class="material-symbols-outlined text-sm">schedule</span> 12 Weeks
+                            </div>
+                            <div class="flex items-center gap-1 text-slate-500 dark:text-slate-400 text-xs">
+                                <span class="material-symbols-outlined text-sm">school</span> 4 Credits
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 leading-snug">Autonomous Mobile
+                            Robots (AMR)</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 mb-6 line-clamp-2">Master navigation
+                            algorithms, SLAM, and path planning for industrial and consumer mobile robotics platform.
+                        </p>
+                        <div class="mt-auto flex gap-3">
+                            <button
+                                class="flex-1 bg-primary hover:bg-primary/90 text-white text-sm font-bold py-2.5 rounded-lg transition-colors">Apply
+                                Now</button>
+                            <button
+                                class="flex-1 bg-transparent border border-primary text-primary hover:bg-primary/10 text-sm font-bold py-2.5 rounded-lg transition-colors">View
+                                Details</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Course Card 2 -->
+                <div
+                    class="bg-white dark:bg-slate-800/40 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col group hover:shadow-xl hover:shadow-primary/5 transition-all duration-300">
+                    <div class="relative h-48 overflow-hidden">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            data-alt="Robotics hardware components on a workbench"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCzsHNDojcvIOtB2WY81wNr9cdDf0b9sClFRBNSjYEtRB8VFRcBmd7dXcCYox2ftAMcYTQsnbjtGKROGXNdXo2BHkatAmSggGkXHEPQEeKhwRcvfE2jQu8gyxiqMhkMDnbhgO2OmXEpKGbr8gFIBY1nTR9L0Pv-th9IuHgjKDFcK_6tNsT-aqUx-XJjVqOI2o6CKiWufW23U1SYCDdXRZrW8OKLtTtaGqDJYo3pGNMl5EgiS96JkFh5_Wg5omruDY9MqTUu1Xz34Pw" />
+                        <div
+                            class="absolute top-3 right-3 bg-red-600/90 text-white text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded backdrop-blur-sm">
+                            Advanced</div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-1">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="flex items-center gap-1 text-slate-500 dark:text-slate-400 text-xs">
+                                <span class="material-symbols-outlined text-sm">schedule</span> 10 Weeks
+                            </div>
+                            <div class="flex items-center gap-1 text-slate-500 dark:text-slate-400 text-xs">
+                                <span class="material-symbols-outlined text-sm">school</span> 3 Credits
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 leading-snug">Kinematics &amp;
+                            Dynamics</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 mb-6 line-clamp-2">Study the physics of
+                            robotic movement, forward and inverse kinematics, and multi-body dynamics calculations.</p>
+                        <div class="mt-auto flex gap-3">
+                            <button
+                                class="flex-1 bg-primary hover:bg-primary/90 text-white text-sm font-bold py-2.5 rounded-lg transition-colors">Apply
+                                Now</button>
+                            <button
+                                class="flex-1 bg-transparent border border-primary text-primary hover:bg-primary/10 text-sm font-bold py-2.5 rounded-lg transition-colors">View
+                                Details</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Course Card 3 -->
+                <div
+                    class="bg-white dark:bg-slate-800/40 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col group hover:shadow-xl hover:shadow-primary/5 transition-all duration-300">
+                    <div class="relative h-48 overflow-hidden">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            data-alt="Microchip circuit board close up"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_VccPkQx26IpUDilzB56peqw8ThYeteh3RG6eP0dAliq78tyPQ-vSMRK3_nkmtA74DfJPL2h2aoP6YCGY1ITH7NL0MHyFEUZ1koQYGN1gkiPfKlM9vAtjxWEOLxMO93IshvBh7Ly18tn8BjMX6OojL3fFtWw0fYHo45quLp9nwja8rlaFOy5AZ7PG4cM2C3-JvX5BUa6Ru60IgFvD31eDBuB5u0c9-AA1V0yfHTGrBSuHUrmveuxHHgm35VRHpEiVG1a4Sh1m1n0v" />
+                        <div
+                            class="absolute top-3 right-3 bg-green-600/90 text-white text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded backdrop-blur-sm">
+                            Beginner</div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-1">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="flex items-center gap-1 text-slate-500 dark:text-slate-400 text-xs">
+                                <span class="material-symbols-outlined text-sm">schedule</span> 8 Weeks
+                            </div>
+                            <div class="flex items-center gap-1 text-slate-500 dark:text-slate-400 text-xs">
+                                <span class="material-symbols-outlined text-sm">school</span> 2 Credits
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 leading-snug">Embedded Systems
+                        </h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 mb-6 line-clamp-2">Microcontroller
+                            programming for hardware interfacing. Introduction to sensors, actuators, and real-time
+                            processing.</p>
+                        <div class="mt-auto flex gap-3">
+                            <button
+                                class="flex-1 bg-primary hover:bg-primary/90 text-white text-sm font-bold py-2.5 rounded-lg transition-colors">Apply
+                                Now</button>
+                            <button
+                                class="flex-1 bg-transparent border border-primary text-primary hover:bg-primary/10 text-sm font-bold py-2.5 rounded-lg transition-colors">View
+                                Details</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Course Card 4 -->
+                <div
+                    class="bg-white dark:bg-slate-800/40 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col group hover:shadow-xl hover:shadow-primary/5 transition-all duration-300">
+                    <div class="relative h-48 overflow-hidden">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            data-alt="Robot looking through a camera lens"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOQ6bMfeRiFoaXUh9aqAoZ7KkQ0T0A2MaWgLjvhCNpmgo_5gDb_mwahqnyE2YMPMYSSKr1Km9AOC_AOIl6vU0OJWDNoQtRiskqk17O5IqoArPsfaopripUDT3Awgp_RvbmVumT6A4BNYyRqd7k05m9zkxGN8faX_hmDuR7rpZjCK9_vV44B6EBt8JPd1oBCgsgkxRzGhZUFZqT6fPN1LAqjnN-Pqf5bSeABw4UxcA92m3I-C3zQsVs9I-Y69BRo8IFVjQVTPmw0QEL" />
+                        <div
+                            class="absolute top-3 right-3 bg-primary/90 text-white text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded backdrop-blur-sm">
+                            Intermediate</div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-1">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="flex items-center gap-1 text-slate-500 dark:text-slate-400 text-xs">
+                                <span class="material-symbols-outlined text-sm">schedule</span> 14 Weeks
+                            </div>
+                            <div class="flex items-center gap-1 text-slate-500 dark:text-slate-400 text-xs">
+                                <span class="material-symbols-outlined text-sm">school</span> 4 Credits
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 leading-snug">Computer Vision
+                            for AI</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 mb-6 line-clamp-2">Visual perception and
+                            object recognition using OpenCV and deep learning models for autonomous interaction.</p>
+                        <div class="mt-auto flex gap-3">
+                            <button
+                                class="flex-1 bg-primary hover:bg-primary/90 text-white text-sm font-bold py-2.5 rounded-lg transition-colors">Apply
+                                Now</button>
+                            <button
+                                class="flex-1 bg-transparent border border-primary text-primary hover:bg-primary/10 text-sm font-bold py-2.5 rounded-lg transition-colors">View
+                                Details</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Course Card 5 -->
+                <div
+                    class="bg-white dark:bg-slate-800/40 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col group hover:shadow-xl hover:shadow-primary/5 transition-all duration-300">
+                    <div class="relative h-48 overflow-hidden">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            data-alt="Lines of code on a monitor screen"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiCLztBxClaWpJJ1LhzwJVUN6_06CknC6pK12GTWeCxps0E2lg4bnK4JUDO5OexXlZtKXL6stN252JdybV50NBBZs423AKjGVBy2VIVhMgSGc0m-UOqiEORCgARLlk1LDuwSyTYXBMXAZkxa_PoYJMjj9UeUGY_4_HoawnDMXSQvBPooIPrR-_DyPfAYURW-hPOZ32NePuqnzpZtRLWgzVeuAeTAMC_YSG9DU80O2-0wYz1NPWD5hCkxBiqQY3nIGF_6yNGgb3Ycqs" />
+                        <div
+                            class="absolute top-3 right-3 bg-green-600/90 text-white text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded backdrop-blur-sm">
+                            Beginner</div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-1">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="flex items-center gap-1 text-slate-500 dark:text-slate-400 text-xs">
+                                <span class="material-symbols-outlined text-sm">schedule</span> 6 Weeks
+                            </div>
+                            <div class="flex items-center gap-1 text-slate-500 dark:text-slate-400 text-xs">
+                                <span class="material-symbols-outlined text-sm">school</span> 2 Credits
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 leading-snug">Robot Programming
+                            (ROS)</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 mb-6 line-clamp-2">Learn Python and C++ for
+                            the Robot Operating System (ROS). Building nodes, messages, and services for robot comms.
+                        </p>
+                        <div class="mt-auto flex gap-3">
+                            <button
+                                class="flex-1 bg-primary hover:bg-primary/90 text-white text-sm font-bold py-2.5 rounded-lg transition-colors">Apply
+                                Now</button>
+                            <button
+                                class="flex-1 bg-transparent border border-primary text-primary hover:bg-primary/10 text-sm font-bold py-2.5 rounded-lg transition-colors">View
+                                Details</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Course Card 6 -->
+                <div
+                    class="bg-white dark:bg-slate-800/40 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col group hover:shadow-xl hover:shadow-primary/5 transition-all duration-300">
+                    <div class="relative h-48 overflow-hidden">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            data-alt="Data visualization of sensor network"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWxKw9pAyHjJKlpT3qxpfQ4ws3zQ8aYp42WeAczyerIaGCfAgLWgaB34_ELOkXUuIGNdmCQnllD9ZxC-igr87Clr_mJOZcEAkViZPELZy9XI3vhFq1eKXPGlXZeLAuXZGxjDRT5D4pY46WIr744GvBg7uSoFet4yP35xaMhyRGI1lrhpKNwcZA94ggs-uIiPJRfk_i-y2weuWp3AqEX1zewXlYkNeLfRXUaVDYHooz4tgSbWOOmi3ex0poc0w7uyEHeomH_2-HGB3G" />
+                        <div
+                            class="absolute top-3 right-3 bg-red-600/90 text-white text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded backdrop-blur-sm">
+                            Advanced</div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-1">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="flex items-center gap-1 text-slate-500 dark:text-slate-400 text-xs">
+                                <span class="material-symbols-outlined text-sm">schedule</span> 12 Weeks
+                            </div>
+                            <div class="flex items-center gap-1 text-slate-500 dark:text-slate-400 text-xs">
+                                <span class="material-symbols-outlined text-sm">school</span> 3 Credits
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 leading-snug">Sensor Fusion
+                            &amp; Perception</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 mb-6 line-clamp-2">Integrating multi-sensor
+                            data streams (Lidar, Radar, Camera) using Kalman Filters and probabilistic approaches.</p>
+                        <div class="mt-auto flex gap-3">
+                            <button
+                                class="flex-1 bg-primary hover:bg-primary/90 text-white text-sm font-bold py-2.5 rounded-lg transition-colors">Apply
+                                Now</button>
+                            <button
+                                class="flex-1 bg-transparent border border-primary text-primary hover:bg-primary/10 text-sm font-bold py-2.5 rounded-lg transition-colors">View
+                                Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Pagination -->
+            <div class="mt-16 flex items-center justify-center gap-2">
+                <button
+                    class="w-10 h-10 flex items-center justify-center rounded-lg border border-slate-200 dark:border-slate-800 text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+                    <span class="material-symbols-outlined">chevron_left</span>
+                </button>
+                <button
+                    class="w-10 h-10 flex items-center justify-center rounded-lg bg-primary text-white font-bold">1</button>
+                <button
+                    class="w-10 h-10 flex items-center justify-center rounded-lg border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">2</button>
+                <button
+                    class="w-10 h-10 flex items-center justify-center rounded-lg border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">3</button>
+                <span class="px-2 text-slate-500">...</span>
+                <button
+                    class="w-10 h-10 flex items-center justify-center rounded-lg border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">12</button>
+                <button
+                    class="w-10 h-10 flex items-center justify-center rounded-lg border border-slate-200 dark:border-slate-800 text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+                    <span class="material-symbols-outlined">chevron_right</span>
+                </button>
+            </div>
+        </main>
+        <!-- Footer -->
+        <footer
+            class="mt-20 border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 px-6 md:px-16 lg:px-40 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="bg-primary p-1 rounded text-white">
+                            <span class="material-symbols-outlined text-xl block">precision_manufacturing</span>
+                        </div>
+                        <span class="font-bold text-lg dark:text-white">UniFirst Robotics</span>
+                    </div>
+                    <p class="text-sm text-slate-500 dark:text-slate-400">Leading the next generation of engineers
+                        through cutting-edge robotics education and industrial research.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-slate-900 dark:text-white mb-4">Programs</h4>
+                    <ul class="space-y-2 text-sm text-slate-500 dark:text-slate-400">
+                        <li><a class="hover:text-primary transition-colors" href="#">Undergraduate</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Graduate School</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Online Certifications</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Summer Workshops</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-slate-900 dark:text-white mb-4">Resources</h4>
+                    <ul class="space-y-2 text-sm text-slate-500 dark:text-slate-400">
+                        <li><a class="hover:text-primary transition-colors" href="#">Lab Access</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Documentation</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Job Board</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Alumni Network</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-slate-900 dark:text-white mb-4">Newsletter</h4>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mb-3">Get the latest robotics news and course
+                        updates.</p>
+                    <div class="flex gap-2">
+                        <input
+                            class="bg-slate-100 dark:bg-slate-800 border-none rounded-lg text-xs w-full focus:ring-primary"
+                            placeholder="Email" type="email" />
+                        <button class="bg-primary p-2 rounded-lg text-white">
+                            <span class="material-symbols-outlined text-sm">send</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="mt-12 pt-8 border-t border-slate-100 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
+                <p>© 2024 UniFirst University Robotics Laboratory. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <a class="hover:text-primary" href="#">Privacy Policy</a>
+                    <a class="hover:text-primary" href="#">Terms of Service</a>
+                    <a class="hover:text-primary" href="#">Cookie Settings</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const menuBtn = document.getElementById("menu-btn");
+            const mobileMenu = document.getElementById("mobile-menu");
+
+            menuBtn.addEventListener("click", function () {
+                mobileMenu.classList.toggle("hidden");
+            });
+
+        });
+
+        function toggleDropdown() {
+            document.getElementById("mobile-dropdown").classList.toggle("hidden");
+        }
+    </script>
+</body>
+
+</html>

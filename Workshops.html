@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Colleges | UniFirst Robotics</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1a227a",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#121320",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .glass-card {
+            background: rgba(26, 34, 122, 0.05);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .glass-card:hover {
+            border-color: rgba(26, 34, 122, 0.5);
+            background: rgba(26, 34, 122, 0.1);
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen font-display">
+    <!-- Navigation -->
+    <header class="fixed top-0 w-full z-50 glass-nav border-b border-slate-200/10 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+
+                <!-- Logo -->
+                <div class="flex items-center gap-3">
+                    <div class="bg-primary p-1.5 rounded-lg text-white">
+                        <span class="material-symbols-outlined text-2xl leading-none">
+                            precision_manufacturing
+                        </span>
+                    </div>
+                    <span class="text-xl font-extrabold tracking-tight">
+                        UniFirst <span class="text-primary">Robotics</span>
+                    </span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center gap-8">
+
+                    <a class="block px-4 py-2 text-sm hover:bg-gray-100 rounded-md hover:font-bold  text-primary"
+                        href="HomePage.html">
+                        Home
+                    </a>
+
+                    <a class="block px-4 py-2 text-sm hover:bg-gray-100 rounded-md hover:font-bold  text-primary"
+                        href="About Us.html">
+                        About Us
+                    </a>
+
+                    <a class="block px-4 py-2 text-sm hover:bg-gray-100 rounded-md hover:font-bold  text-primary"
+                        href="Courses.html">
+                        Courses
+                    </a>
+
+                    <!-- Dropdown -->
+                    <div class="relative group">
+                        <button
+                            class="block px-4 py-2 text-sm hover:bg-gray-100 rounded-md hover:font-bold  text-primary">
+                            Our Offerings
+                            <span class="material-symbols-outlined text-sm">expand_more</span>
+                        </button>
+
+                        <div class="absolute left-0 mt-2 w-64 bg-white border rounded-lg shadow-lg p-2 
+                                opacity-0 invisible group-hover:opacity-100 group-hover:visible 
+                                transition-all duration-200">
+
+                            <a class="block px-4 py-2 text-sm hover:bg-gray-100 rounded-md hover:font-bold  text-primary"
+                                href="Courses.html">
+                                Courses
+                            </a>
+
+                            <a class="block px-4 py-2 text-sm hover:bg-gray-100 rounded-md hover:font-bold  text-primary"
+                                href="Lab Setup.html">
+                                Lab Setup
+                            </a>
+
+                            <a class="block px-4 py-2 text-sm hover:bg-gray-100 rounded-md hover:font-bold  text-primary"
+                                href="Computer Sales and Services.html">
+                                Computer Sales and Services
+                            </a>
+
+                            <a class="block px-4 py-2 text-sm hover:bg-gray-100 rounded-md hover:font-bold  text-primary"
+                                href="Study Abroad.html">
+                                Study Abroad
+                            </a>
+
+                            <a class="block px-4 py-2 text-sm hover:bg-gray-100 rounded-md hover:font-bold  text-primary"
+                                href="Workshops School Program.html">
+                                Workshops School Program
+                            </a>
+                        </div>
+                    </div>
+
+                    <a class="block px-4 py-2 text-sm hover:bg-gray-100 rounded-md hover:font-bold  text-primary"
+                        href="#">
+                        Contact Us
+                    </a>
+
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="menu-btn" class="text-gray-700 focus:outline-none">
+                        <span class="material-symbols-outlined text-3xl">menu</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-4 py-4 space-y-3">
+
+                <a href="HomePage.html" class="block text-sm font-medium hover:text-primary hover:font-bold  text-primary">
+                    Home
+                </a>
+
+                <a href="About Us.html" class="block text-sm font-medium hover:text-primary hover:font-bold  text-primary">
+                    About Us
+                </a>
+
+                <a href="Courses.html" class="block text-sm font-medium hover:text-primary hover:font-bold  text-primary">
+                    Courses
+                </a>
+
+                <!-- Mobile Dropdown -->
+                <div>
+                    <button onclick="toggleDropdown()"
+                        class="w-full flex justify-between items-center text-sm font-medium hover:text-primary hover:font-bold  text-primary">
+                        Our Offerings
+                        <span class="material-symbols-outlined text-sm">expand_more</span>
+                    </button>
+
+                    <div id="mobile-dropdown" class="hidden mt-2 ml-4 space-y-2">
+                        <a href="Courses.html" class="block text-sm hover:text-primary hover:font-bold  text-primary">Courses</a>
+                        <a href="Lab Setup.html" class="block text-sm hover:text-primary hover:font-bold  text-primary">Lab Setup</a>
+                        <a href="Computer Sales and Services.html" class="block text-sm hover:text-primary hover:font-bold  text-primary">Computer
+                            Sales and Services</a>
+                        <a href="Study Abroad.html" class="block text-sm hover:text-primary hover:font-bold  text-primary">Study
+                            Abroad</a>
+                        <a href="Workshops School Program.html" class="block text-sm hover:text-primary hover:font-bold  text-primary">Workshops
+                            School Program</a>
+                    </div>
+                </div>
+
+                <a href="Contact Us.html" class="block text-sm font-medium hover:text-primary hover:font-bold  text-primary">
+                    Contact Us
+                </a>
+
+            </div>
+        </div>
+    </header>
+    <main>
+        <!-- Hero Section -->
+        <section class="relative py-20 overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <div class="absolute inset-0 bg-gradient-to-b from-primary/10 to-transparent dark:from-primary/20">
+                </div>
+                <div
+                    class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-[600px] h-[600px] bg-primary/20 rounded-full blur-[120px]">
+                </div>
+            </div>
+            <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto">
+                    <h1 class="text-4xl md:text-6xl font-bold tracking-tight text-slate-900 dark:text-white mb-6">
+                        Bridging Academia and <span class="text-primary dark:text-blue-400">Industry Excellence</span>
+                    </h1>
+                    <p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed mb-10">
+                        UniFirst Robotics partners with leading educational institutions to deliver cutting-edge
+                        engineering programs, practical hardware experience, and direct pathways to the robotics
+                        workforce.
+                    </p>
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <div
+                            class="flex items-center gap-2 px-4 py-2 bg-slate-100 dark:bg-slate-800 rounded-full text-sm border border-slate-200 dark:border-slate-700">
+                            <span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+                            <span>50+ Partner Universities</span>
+                        </div>
+                        <div
+                            class="flex items-center gap-2 px-4 py-2 bg-slate-100 dark:bg-slate-800 rounded-full text-sm border border-slate-200 dark:border-slate-700">
+                            <span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+                            <span>Industry Accredited</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Services Grid -->
+        <section class="py-16 bg-background-light dark:bg-background-dark">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Tech Workshops -->
+                    <div class="glass-card p-8 rounded-xl flex flex-col transition-all group">
+                        <div
+                            class="size-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-primary text-3xl">developer_board</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Tech Workshops</h3>
+                        <p class="text-slate-600 dark:text-slate-400 mb-6 flex-grow">
+                            Hands-on technical sessions covering ROS (Robot Operating System), AI-driven vision
+                            integration, and advanced hardware prototyping. We bring industry-standard equipment
+                            directly to your campus.
+                        </p>
+                        <div class="relative aspect-video rounded-lg overflow-hidden mb-6">
+                            <div
+                                class="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors z-10">
+                            </div>
+                            <img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                                data-alt="Modern robotics engineering lab with students"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBz2M5kSuhwYORSllxHWhbnxfb0A0ccCCcOpBntll6b5rvtw9AlfiwhBziguNyli3rokvyCASkYeCA58ds3EuFrWWElzx3rPcpt2uZP82n-KCasabPVXBIB0LH2Z0YKtzlpRtA-ISA6Ig1NvjQrEN44ja2qX8FO1fdKSGQb7eNcdaCD-iysjj30kNDB8TqD7h_yRtD9yAqcz1XqTom7Oq7tvfoL_1bIow8Av8znHhx8MdXFDMWn58KlNOvy-mZ7oY6u0aH5U5cMk3y4" />
+                        </div>
+                        <a class="inline-flex items-center gap-2 font-semibold text-primary dark:text-blue-400 hover:gap-3 transition-all"
+                            href="#">
+                            Explore Curriculum <span class="material-symbols-outlined">arrow_forward</span>
+                        </a>
+                    </div>
+                    <!-- Project Guidance -->
+                    <div class="glass-card p-8 rounded-xl flex flex-col transition-all group">
+                        <div
+                            class="size-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-primary text-3xl">architecture</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Project Guidance</h3>
+                        <p class="text-slate-600 dark:text-slate-400 mb-6 flex-grow">
+                            Specialized support for capstone projects and international robotics competitions. Our
+                            engineers provide architectural reviews, technical debugging, and manufacturing resources.
+                        </p>
+                        <div class="relative aspect-video rounded-lg overflow-hidden mb-6">
+                            <div
+                                class="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors z-10">
+                            </div>
+                            <img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                                data-alt="Close up of robotic arm schematics on screen"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbPdtxrTovYKyX54F7zgr0XhMsS-5pIcBU6eUZDcQfsehbpeWRmhSzvxEwnILChXzmUUsT5NO6YptJlsrrkgT8HsjQ4oU4iqwpeiQ8INzOFwwA914VGDCKdOYDYu_y0Ygtd5UT6bPe2xTZVd5NHvQVW3qWlt-412rJX5OslM5GCPzshsenT1hDmcQj8E89fsGyJXF2KVO3ihopbY00tRY7MgYfiWKKWjtr35Ng0z9qCA4-U5Yl_QdHjustGkYAlrjJu1zO1qzk_bse" />
+                        </div>
+                        <a class="inline-flex items-center gap-2 font-semibold text-primary dark:text-blue-400 hover:gap-3 transition-all"
+                            href="#">
+                            Get Project Support <span class="material-symbols-outlined">arrow_forward</span>
+                        </a>
+                    </div>
+                    <!-- Internship Programs -->
+                    <div class="glass-card p-8 rounded-xl flex flex-col transition-all group">
+                        <div
+                            class="size-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-primary text-3xl">work_history</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Internship Programs</h3>
+                        <p class="text-slate-600 dark:text-slate-400 mb-6 flex-grow">
+                            Accelerated placement opportunities with top-tier robotics firms and our internal R&amp;D
+                            labs. We provide students with high-impact roles in software, electrical, and mechanical
+                            engineering.
+                        </p>
+                        <div class="relative aspect-video rounded-lg overflow-hidden mb-6">
+                            <div
+                                class="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors z-10">
+                            </div>
+                            <img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                                data-alt="Engineering team collaborating in office space"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1Of-_wyb0CpC73hzZRo0FFp6x0GDp6_ZwDBxNqHgFR0WAyE_EyYIy-AsFX_u8ixh6vnnxuzJ8E6E06erOxrqbnWJnYQ--ojjid02bpXrq5s85CG4TnmJgpcFr7ySnwD6QdeR6Vn7eMYPEx5aJ1fFmDXb5xybS4IHe4WLqhnUwXYxaNC7FZZCd6KPRx-3avhChBGWuDgLY7O2QHofXQvszs25cWNVlGCsad8zjc9JObX3HpGU_5rfjYF20LZvjk3MRST4vnV9H0KiB" />
+                        </div>
+                        <a class="inline-flex items-center gap-2 font-semibold text-primary dark:text-blue-400 hover:gap-3 transition-all"
+                            href="#">
+                            View Career Portal <span class="material-symbols-outlined">arrow_forward</span>
+                        </a>
+                    </div>
+                    <!-- Industry Mentorship -->
+                    <div class="glass-card p-8 rounded-xl flex flex-col transition-all group">
+                        <div
+                            class="size-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-primary text-3xl">psychology</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Industry Mentorship</h3>
+                        <p class="text-slate-600 dark:text-slate-400 mb-6 flex-grow">
+                            Direct connection with senior engineers and tech leads. Students receive career coaching,
+                            resume reviews, and insight into the latest industry trends and technical requirements.
+                        </p>
+                        <div class="relative aspect-video rounded-lg overflow-hidden mb-6">
+                            <div
+                                class="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors z-10">
+                            </div>
+                            <img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                                data-alt="Professional mentor talking to student engineer"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvJ5_P9lcebJt5fvGADaA44XY-vJPv3niseJTKhGh1q3KIifL6go0DM7KO03chz3cafuJb7Lhae8_GLroDi_K2AQBVECypqfI7NDSuRyrpgxjxOY5-MPQIugsVT0319nSO0oiDRuJAxQo1MrIpCfnsGZiSGRmHX1HVNTJiy21jd0knrv5c7_V2nvthBpr7QENkyRB1DdbLzG2GGTlHUtZ5IRD633_MB7n-E3FtGVhRgi4YlJoTXlzXxGRdnRRFeNHCa0aHaysh49Es" />
+                        </div>
+                        <a class="inline-flex items-center gap-2 font-semibold text-primary dark:text-blue-400 hover:gap-3 transition-all"
+                            href="#">
+                            Find a Mentor <span class="material-symbols-outlined">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- CTA Section -->
+        <section class="py-20 relative overflow-hidden">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div
+                    class="bg-primary rounded-2xl p-8 md:p-16 text-center text-white shadow-2xl overflow-hidden relative">
+                    <div class="absolute inset-0 opacity-10 pointer-events-none">
+                        <div class="absolute top-0 left-0 w-full h-full"
+                            style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 24px 24px;">
+                        </div>
+                    </div>
+                    <h2 class="text-3xl md:text-5xl font-bold mb-6">Ready to Empower Your Campus?</h2>
+                    <p class="text-lg text-white/80 mb-10 max-w-2xl mx-auto">
+                        Partner with UniFirst Robotics to provide your students with the tools, guidance, and industry
+                        connections they need to lead the next generation of automation.
+                    </p>
+                    <div class="flex flex-col sm:flex-row justify-center gap-4">
+                        <button
+                            class="bg-white text-primary px-8 py-4 rounded-xl font-bold hover:bg-slate-100 transition-colors">
+                            Request Collaboration
+                        </button>
+                        <button
+                            class="bg-primary/20 border border-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-xl font-bold hover:bg-primary/30 transition-colors">
+                            Download Brochure
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-slate-100 dark:bg-slate-900/50 border-t border-slate-200 dark:border-slate-800 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+                <div class="col-span-2 md:col-span-1">
+                    <div class="flex items-center gap-2 text-primary dark:text-white mb-6">
+                        <span class="material-symbols-outlined text-2xl">precision_manufacturing</span>
+                        <span class="text-lg font-bold">UniFirst</span>
+                    </div>
+                    <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
+                        Setting the standard for collegiate robotics education and industry integration worldwide.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6">Resources</h4>
+                    <ul class="space-y-4 text-sm text-slate-500 dark:text-slate-400">
+                        <li><a class="hover:text-primary transition-colors" href="#">Documentation</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Workshop Kits</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Academic Papers</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6">Company</h4>
+                    <ul class="space-y-4 text-sm text-slate-500 dark:text-slate-400">
+                        <li><a class="hover:text-primary transition-colors" href="#">About Us</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Careers</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6">Stay Updated</h4>
+                    <div class="flex gap-2">
+                        <input
+                            class="bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-lg text-sm flex-grow focus:ring-primary focus:border-primary"
+                            placeholder="Email" type="email" />
+                        <button class="bg-primary p-2 rounded-lg text-white">
+                            <span class="material-symbols-outlined text-base">send</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-slate-200 dark:border-slate-800 text-center text-xs text-slate-400">
+                <p>© 2024 UniFirst Robotics Inc. All rights reserved. Built for the future of engineering.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const menuBtn = document.getElementById("menu-btn");
+            const mobileMenu = document.getElementById("mobile-menu");
+
+            menuBtn.addEventListener("click", function () {
+                mobileMenu.classList.toggle("hidden");
+            });
+
+        });
+
+        function toggleDropdown() {
+            document.getElementById("mobile-dropdown").classList.toggle("hidden");
+        }
+    </script>
+</body>
+
+</html>
