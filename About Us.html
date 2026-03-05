@@ -54,134 +54,83 @@
 <body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
     <div class="relative flex min-h-screen flex-col overflow-x-hidden">
         <!-- Header -->
-        <header class="fixed top-0 w-full z-50 glass-nav border-b border-slate-200/10 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <header class="fixed top-0 w-full z-50 bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-6">
             <div class="flex items-center justify-between h-16">
 
-                <!-- Logo -->
-                <div class="flex items-center gap-3">
-                    <div class="bg-primary p-1.5 rounded-lg text-white">
-                        <span class="material-symbols-outlined text-2xl leading-none">
-                            precision_manufacturing
-                        </span>
-                    </div>
-                    <span class="text-xl font-extrabold tracking-tight">
-                        UniFirst <span class="text-primary">Robotics</span>
-                    </span>
-                </div>
+                <!-- Logo (Left End) -->
+                <a href="HomePage.html" class="flex items-center">
+                    <img src="Images/Logo.png" alt="UniFirst Robotics Logo" class="h-12 w-auto object-contain">
+                </a>
 
-                <!-- Desktop Navigation -->
-                <nav class="hidden md:flex items-center gap-8">
+                <!-- Desktop Navigation (Right End) -->
+                <nav class="hidden md:flex items-center space-x-8">
 
-                    <a class="block px-4 py-2 text-sm hover:bg-gray-100 rounded-md hover:font-bold  text-primary"
-                        href="HomePage.html">
+                    <a href="HomePage.html"
+                        class="text-sm font-medium  text-nav-elements hover:text-nav-elements font-bold transition">
                         Home
                     </a>
 
-                    <a class="block px-4 py-2 text-sm hover:bg-gray-100 rounded-md hover:font-bold  text-primary"
-                        href="About Us.html">
+                    <a href="About Us.html"
+                        class="text-sm font-medium  text-nav-elements hover:text-nav-elements font-bold transition">
                         About Us
                     </a>
 
-                    <a class="block px-4 py-2 text-sm hover:bg-gray-100 rounded-md hover:font-bold  text-primary"
-                        href="Courses.html">
+                    <a href="Courses.html"
+                        class="text-sm font-medium  text-nav-elements hover:text-nav-elements font-bold transition">
                         Courses
+                    </a>
+
+                    <a href="Study Abroad.html"
+                        class="text-sm font-medium  text-nav-elements hover:text-nav-elements font-bold transition">
+                        Study Abroad
+                    </a>
+
+                    <a href="Lab Setup.html"
+                        class="text-sm font-medium  text-nav-elements hover:text-nav-elements font-bold transition">
+                        Lab Setup
                     </a>
 
                     <!-- Dropdown -->
                     <div class="relative group">
                         <button
-                            class="block px-4 py-2 text-sm hover:bg-gray-100 rounded-md hover:font-bold  text-primary">
+                            class="text-sm text-nav-elements font-medium flex items-center gap-1 hover:text-nav-elements text-bold transition">
                             Our Offerings
                             <span class="material-symbols-outlined text-sm">expand_more</span>
                         </button>
 
-                        <div class="absolute left-0 mt-2 w-64 bg-white border rounded-lg shadow-lg p-2 
+                        <div class="absolute right-0 mt-3 w-64 bg-white border rounded-xl shadow-lg p-3 
                                 opacity-0 invisible group-hover:opacity-100 group-hover:visible 
                                 transition-all duration-200">
 
-                            <a class="block px-4 py-2 text-sm hover:bg-gray-100 rounded-md hover:font-bold  text-primary"
-                                href="Courses.html">
-                                Courses
-                            </a>
-
-                            <a class="block px-4 py-2 text-sm hover:bg-gray-100 rounded-md hover:font-bold  text-primary"
-                                href="Lab Setup.html">
-                                Lab Setup
-                            </a>
-
-                            <a class="block px-4 py-2 text-sm hover:bg-gray-100 rounded-md hover:font-bold  text-primary"
-                                href="Computer Sales and Services.html">
-                                Computer Sales and Services
-                            </a>
-
-                            <a class="block px-4 py-2 text-sm hover:bg-gray-100 rounded-md hover:font-bold  text-primary"
-                                href="Study Abroad.html">
-                                Study Abroad
-                            </a>
-
-                            <a class="block px-4 py-2 text-sm hover:bg-gray-100 rounded-md hover:font-bold  text-primary"
-                                href="Workshops School Program.html">
-                                Workshops School Program
-                            </a>
+                            <a href="Courses.html"
+                                class="block px-3 py-2 text-sm text-nav-elements hover:bg-gray-100 rounded-md">Courses</a>
+                            <a href="Lab Setup.html"
+                                class="block px-3 py-2 text-sm text-nav-elements hover:bg-gray-100 rounded-md">Lab
+                                Setup</a>
+                            <a href="Computer Sales and Services.html"
+                                class="block px-3 py-2 text-sm text-nav-elements hover:bg-gray-100 rounded-md">Computer
+                                Sales & Services</a>
+                            <a href="Study Abroad.html"
+                                class="block px-3 py-2 text-sm text-nav-elements hover:bg-gray-100 rounded-md">Study
+                                Abroad</a>
+                            <a href="Workshops School Program.html"
+                                class="block px-3 py-2 text-sm text-nav-elements hover:bg-gray-100 rounded-md">Workshops
+                                School Program</a>
                         </div>
                     </div>
 
-                    <a class="block px-4 py-2 text-sm hover:bg-gray-100 rounded-md hover:font-bold  text-primary"
-                        href="#">
+                    <a href="Contact Us.html"
+                        class="text-sm font-medium hover:text-nav-elements transition text-nav-elements">
                         Contact Us
                     </a>
 
                 </nav>
 
                 <!-- Mobile Menu Button -->
-                <div class="md:hidden">
-                    <button id="menu-btn" class="text-gray-700 focus:outline-none">
-                        <span class="material-symbols-outlined text-3xl">menu</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
-            <div class="px-4 py-4 space-y-3">
-
-                <a href="HomePage.html" class="block text-sm font-medium hover:text-primary hover:font-bold  text-primary">
-                    Home
-                </a>
-
-                <a href="About Us.html" class="block text-sm font-medium hover:text-primary hover:font-bold  text-primary">
-                    About Us
-                </a>
-
-                <a href="Courses.html" class="block text-sm font-medium hover:text-primary hover:font-bold  text-primary">
-                    Courses
-                </a>
-
-                <!-- Mobile Dropdown -->
-                <div>
-                    <button onclick="toggleDropdown()"
-                        class="w-full flex justify-between items-center text-sm font-medium hover:text-primary hover:font-bold  text-primary">
-                        Our Offerings
-                        <span class="material-symbols-outlined text-sm">expand_more</span>
-                    </button>
-
-                    <div id="mobile-dropdown" class="hidden mt-2 ml-4 space-y-2">
-                        <a href="Courses.html" class="block text-sm hover:text-primary hover:font-bold  text-primary">Courses</a>
-                        <a href="Lab Setup.html" class="block text-sm hover:text-primary hover:font-bold  text-primary">Lab Setup</a>
-                        <a href="Computer Sales and Services.html" class="block text-sm hover:text-primary hover:font-bold  text-primary">Computer
-                            Sales and Services</a>
-                        <a href="Study Abroad.html" class="block text-sm hover:text-primary hover:font-bold  text-primary">Study
-                            Abroad</a>
-                        <a href="Workshops School Program.html" class="block text-sm hover:text-primary hover:font-bold  text-primary">Workshops
-                            School Program</a>
-                    </div>
-                </div>
-
-                <a href="Contact Us.html" class="block text-sm font-medium hover:text-primary hover:font-bold  text-primary">
-                    Contact Us
-                </a>
+                <button id="menu-btn" class="md:hidden">
+                    <span class="material-symbols-outlined text-3xl">menu</span>
+                </button>
 
             </div>
         </div>
