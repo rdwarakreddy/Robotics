@@ -21,9 +21,10 @@
             theme: {
                 extend: {
                     colors: {
-                        "primary": "#1a227a",
+                        "primary": "#white",
                         "background-light": "#f6f6f8",
                         "background-dark": "#121320",
+                         "nav-elements": "#1d407f"
                     },
                     fontFamily: {
                         "display": ["Inter", "sans-serif"]
@@ -52,134 +53,83 @@
 <body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen font-display">
     <div class="relative flex flex-col min-h-screen w-full overflow-x-hidden">
         <!-- Header / Navigation -->
-       <header class="fixed top-0 w-full z-50 glass-nav border-b border-slate-200/10 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <header class="fixed top-0 w-full z-50 bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-6">
             <div class="flex items-center justify-between h-16">
 
-                <!-- Logo -->
-                <div class="flex items-center gap-3">
-                    <div class="bg-primary p-1.5 rounded-lg text-white">
-                        <span class="material-symbols-outlined text-2xl leading-none">
-                            precision_manufacturing
-                        </span>
-                    </div>
-                    <span class="text-xl font-extrabold tracking-tight">
-                        UniFirst <span class="text-primary">Robotics</span>
-                    </span>
-                </div>
+                <!-- Logo (Left End) -->
+                <a href="HomePage.html" class="flex items-center">
+                    <img src="images/Logo.png" alt="UniFirst Robotics Logo" class="h-12 w-auto object-contain">
+                </a>
 
-                <!-- Desktop Navigation -->
-                <nav class="hidden md:flex items-center gap-8">
+                <!-- Desktop Navigation (Right End) -->
+                <nav class="hidden md:flex items-center space-x-8">
 
-                    <a class="block px-4 py-2 text-sm hover:bg-gray-100 rounded-md hover:font-bold  text-primary"
-                        href="HomePage.html">
+                    <a href="HomePage.html"
+                        class="text-sm font-medium  text-nav-elements hover:text-nav-elements font-bold transition">
                         Home
                     </a>
 
-                    <a class="block px-4 py-2 text-sm hover:bg-gray-100 rounded-md hover:font-bold  text-primary"
-                        href="About Us.html">
+                    <a href="About Us.html"
+                        class="text-sm font-medium  text-nav-elements hover:text-nav-elements font-bold transition">
                         About Us
                     </a>
 
-                    <a class="block px-4 py-2 text-sm hover:bg-gray-100 rounded-md hover:font-bold  text-primary"
-                        href="Courses.html">
+                    <a href="Courses.html"
+                        class="text-sm font-medium  text-nav-elements hover:text-nav-elements font-bold transition">
                         Courses
+                    </a>
+
+                    <a href="Study Abroad.html"
+                        class="text-sm font-medium  text-nav-elements hover:text-nav-elements font-bold transition">
+                        Study Abroad
+                    </a>
+
+                    <a href="Lab Setup.html"
+                        class="text-sm font-medium  text-nav-elements hover:text-nav-elements font-bold transition">
+                        Lab Setup
                     </a>
 
                     <!-- Dropdown -->
                     <div class="relative group">
                         <button
-                            class="block px-4 py-2 text-sm hover:bg-gray-100 rounded-md hover:font-bold  text-primary">
+                            class="text-sm text-nav-elements font-medium flex items-center gap-1 hover:text-nav-elements text-bold transition">
                             Our Offerings
                             <span class="material-symbols-outlined text-sm">expand_more</span>
                         </button>
 
-                        <div class="absolute left-0 mt-2 w-64 bg-white border rounded-lg shadow-lg p-2 
+                        <div class="absolute right-0 mt-3 w-64 bg-white border rounded-xl shadow-lg p-3 
                                 opacity-0 invisible group-hover:opacity-100 group-hover:visible 
                                 transition-all duration-200">
 
-                            <a class="block px-4 py-2 text-sm hover:bg-gray-100 rounded-md hover:font-bold  text-primary"
-                                href="Courses.html">
-                                Courses
-                            </a>
-
-                            <a class="block px-4 py-2 text-sm hover:bg-gray-100 rounded-md hover:font-bold  text-primary"
-                                href="Lab Setup.html">
-                                Lab Setup
-                            </a>
-
-                            <a class="block px-4 py-2 text-sm hover:bg-gray-100 rounded-md hover:font-bold  text-primary"
-                                href="Computer Sales and Services.html">
-                                Computer Sales and Services
-                            </a>
-
-                            <a class="block px-4 py-2 text-sm hover:bg-gray-100 rounded-md hover:font-bold  text-primary"
-                                href="Study Abroad.html">
-                                Study Abroad
-                            </a>
-
-                            <a class="block px-4 py-2 text-sm hover:bg-gray-100 rounded-md hover:font-bold  text-primary"
-                                href="Workshops School Program.html">
-                                Workshops School Program
-                            </a>
+                            <a href="Courses.html"
+                                class="block px-3 py-2 text-sm text-nav-elements hover:bg-gray-100 rounded-md">Courses</a>
+                            <a href="Lab Setup.html"
+                                class="block px-3 py-2 text-sm text-nav-elements hover:bg-gray-100 rounded-md">Lab
+                                Setup</a>
+                            <a href="Computer Sales and Services.html"
+                                class="block px-3 py-2 text-sm text-nav-elements hover:bg-gray-100 rounded-md">Computer
+                                Sales & Services</a>
+                            <a href="Study Abroad.html"
+                                class="block px-3 py-2 text-sm text-nav-elements hover:bg-gray-100 rounded-md">Study
+                                Abroad</a>
+                            <a href="Workshops School Program.html"
+                                class="block px-3 py-2 text-sm text-nav-elements hover:bg-gray-100 rounded-md">Workshops
+                                School Program</a>
                         </div>
                     </div>
 
-                    <a class="block px-4 py-2 text-sm hover:bg-gray-100 rounded-md hover:font-bold  text-primary"
-                        href="#">
+                    <a href="Contact Us.html"
+                        class="text-sm font-medium hover:text-nav-elements transition text-nav-elements">
                         Contact Us
                     </a>
 
                 </nav>
 
                 <!-- Mobile Menu Button -->
-                <div class="md:hidden">
-                    <button id="menu-btn" class="text-gray-700 focus:outline-none">
-                        <span class="material-symbols-outlined text-3xl">menu</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
-            <div class="px-4 py-4 space-y-3">
-
-                <a href="HomePage.html" class="block text-sm font-medium hover:text-primary hover:font-bold  text-primary">
-                    Home
-                </a>
-
-                <a href="About Us.html" class="block text-sm font-medium hover:text-primary hover:font-bold  text-primary">
-                    About Us
-                </a>
-
-                <a href="Courses.html" class="block text-sm font-medium hover:text-primary hover:font-bold  text-primary">
-                    Courses
-                </a>
-
-                <!-- Mobile Dropdown -->
-                <div>
-                    <button onclick="toggleDropdown()"
-                        class="w-full flex justify-between items-center text-sm font-medium hover:text-primary hover:font-bold  text-primary">
-                        Our Offerings
-                        <span class="material-symbols-outlined text-sm">expand_more</span>
-                    </button>
-
-                    <div id="mobile-dropdown" class="hidden mt-2 ml-4 space-y-2">
-                        <a href="Courses.html" class="block text-sm hover:text-primary hover:font-bold  text-primary">Courses</a>
-                        <a href="Lab Setup.html" class="block text-sm hover:text-primary hover:font-bold  text-primary">Lab Setup</a>
-                        <a href="Computer Sales and Services.html" class="block text-sm hover:text-primary hover:font-bold  text-primary">Computer
-                            Sales and Services</a>
-                        <a href="Study Abroad.html" class="block text-sm hover:text-primary hover:font-bold  text-primary">Study
-                            Abroad</a>
-                        <a href="Workshops School Program.html" class="block text-sm hover:text-primary hover:font-bold  text-primary">Workshops
-                            School Program</a>
-                    </div>
-                </div>
-
-                <a href="Contact Us.html" class="block text-sm font-medium hover:text-primary hover:font-bold  text-primary">
-                    Contact Us
-                </a>
+                <button id="menu-btn" class="md:hidden">
+                    <span class="material-symbols-outlined text-3xl">menu</span>
+                </button>
 
             </div>
         </div>
@@ -201,43 +151,44 @@
                     <p class="text-lg text-slate-600 dark:text-slate-400">Advance your career with our specialized
                         robotics curriculum and hands-on technical modules designed by industry experts.</p>
                 </div>
-                <div class="flex items-center gap-3">
+                <!-- <div class="flex items-center gap-3">
                     <span class="text-sm font-medium text-slate-500 dark:text-slate-400">Sort by:</span>
                     <button
                         class="flex items-center gap-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-3 py-2 rounded-lg text-sm font-medium shadow-sm">
                         Popularity
                         <span class="material-symbols-outlined text-sm">expand_more</span>
                     </button>
-                </div>
+                </div> -->
             </div>
             <!-- Filters Bar -->
             <div class="flex flex-wrap items-center gap-3 mb-10 pb-6 border-b border-slate-200 dark:border-slate-800">
-                <button class="bg-primary text-white px-4 py-2 rounded-lg text-sm font-medium flex items-center gap-2">
+
+                <button data-filter="all"
+                    class="filter-btn bg-primary text-white px-4 py-2 rounded-lg text-sm font-medium flex items-center gap-2">
                     <span class="material-symbols-outlined text-sm">apps</span> All Levels
                 </button>
-                <button
-                    class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 px-4 py-2 rounded-lg text-sm font-medium hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors flex items-center gap-2">
-                    <span class="material-symbols-outlined text-sm">signal_cellular_alt_1_bar</span> Beginner
+
+                <button data-filter="beginner"
+                    class="filter-btn bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 px-4 py-2 rounded-lg text-sm font-medium hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors flex items-center gap-2">
+                     Beginner
                 </button>
-                <button
-                    class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 px-4 py-2 rounded-lg text-sm font-medium hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors flex items-center gap-2">
-                    <span class="material-symbols-outlined text-sm">signal_cellular_alt_2_bar</span> Intermediate
+
+                <button data-filter="intermediate"
+                    class="filter-btn bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 px-4 py-2 rounded-lg text-sm font-medium hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors flex items-center gap-2">
+                    Intermediate
                 </button>
-                <button
-                    class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 px-4 py-2 rounded-lg text-sm font-medium hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors flex items-center gap-2">
-                    <span class="material-symbols-outlined text-sm">signal_cellular_alt</span> Advanced
+
+                <button data-filter="advanced"
+                    class="filter-btn bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 px-4 py-2 rounded-lg text-sm font-medium hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors flex items-center gap-2">
+                    Advanced
                 </button>
-                <div class="h-6 w-px bg-slate-300 dark:bg-slate-700 mx-2 hidden sm:block"></div>
-                <button
-                    class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 px-4 py-2 rounded-lg text-sm font-medium hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors flex items-center gap-2">
-                    <span class="material-symbols-outlined text-sm">filter_list</span> More Filters
-                </button>
+
             </div>
             <!-- Courses Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8">
+            <div id="courses-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8">
                 <!-- Course Card 1 -->
-                <div
-                    class="bg-white dark:bg-slate-800/40 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col group hover:shadow-xl hover:shadow-primary/5 transition-all duration-300">
+                <div class="course-card bg-white dark:bg-slate-800/40 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col group hover:shadow-xl hover:shadow-primary/5 transition-all duration-300"
+                    data-level="intermediate">
                     <div class="relative h-48 overflow-hidden">
                         <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                             data-alt="Close up of high-tech robotic arm"
@@ -271,8 +222,8 @@
                     </div>
                 </div>
                 <!-- Course Card 2 -->
-                <div
-                    class="bg-white dark:bg-slate-800/40 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col group hover:shadow-xl hover:shadow-primary/5 transition-all duration-300">
+                <div class="course-card bg-white dark:bg-slate-800/40 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col group hover:shadow-xl hover:shadow-primary/5 transition-all duration-300"
+                    data-level="advanced">
                     <div class="relative h-48 overflow-hidden">
                         <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                             data-alt="Robotics hardware components on a workbench"
@@ -305,8 +256,8 @@
                     </div>
                 </div>
                 <!-- Course Card 3 -->
-                <div
-                    class="bg-white dark:bg-slate-800/40 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col group hover:shadow-xl hover:shadow-primary/5 transition-all duration-300">
+                <div class="course-card bg-white dark:bg-slate-800/40 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col group hover:shadow-xl hover:shadow-primary/5 transition-all duration-300"
+                    data-level="beginner">
                     <div class="relative h-48 overflow-hidden">
                         <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                             data-alt="Microchip circuit board close up"
@@ -340,8 +291,8 @@
                     </div>
                 </div>
                 <!-- Course Card 4 -->
-                <div
-                    class="bg-white dark:bg-slate-800/40 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col group hover:shadow-xl hover:shadow-primary/5 transition-all duration-300">
+                <div class="course-card bg-white dark:bg-slate-800/40 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col group hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 "
+                    data-level="intermediate">
                     <div class="relative h-48 overflow-hidden">
                         <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                             data-alt="Robot looking through a camera lens"
@@ -374,8 +325,8 @@
                     </div>
                 </div>
                 <!-- Course Card 5 -->
-                <div
-                    class="bg-white dark:bg-slate-800/40 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col group hover:shadow-xl hover:shadow-primary/5 transition-all duration-300">
+                <div class="course-card bg-white dark:bg-slate-800/40 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col group hover:shadow-xl hover:shadow-primary/5 transition-all duration-300"
+                    data-level="beginner">
                     <div class="relative h-48 overflow-hidden">
                         <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                             data-alt="Lines of code on a monitor screen"
@@ -409,8 +360,8 @@
                     </div>
                 </div>
                 <!-- Course Card 6 -->
-                <div
-                    class="bg-white dark:bg-slate-800/40 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col group hover:shadow-xl hover:shadow-primary/5 transition-all duration-300">
+                <div class="course-card bg-white dark:bg-slate-800/40 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col group hover:shadow-xl hover:shadow-primary/5 transition-all duration-300"
+                    data-level="advanced">
                     <div class="relative h-48 overflow-hidden">
                         <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                             data-alt="Data visualization of sensor network"
@@ -444,82 +395,82 @@
                 </div>
             </div>
             <!-- Pagination -->
-            <div class="mt-16 flex items-center justify-center gap-2">
-                <button
-                    class="w-10 h-10 flex items-center justify-center rounded-lg border border-slate-200 dark:border-slate-800 text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
-                    <span class="material-symbols-outlined">chevron_left</span>
-                </button>
-                <button
-                    class="w-10 h-10 flex items-center justify-center rounded-lg bg-primary text-white font-bold">1</button>
-                <button
-                    class="w-10 h-10 flex items-center justify-center rounded-lg border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">2</button>
-                <button
-                    class="w-10 h-10 flex items-center justify-center rounded-lg border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">3</button>
-                <span class="px-2 text-slate-500">...</span>
-                <button
-                    class="w-10 h-10 flex items-center justify-center rounded-lg border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">12</button>
-                <button
-                    class="w-10 h-10 flex items-center justify-center rounded-lg border border-slate-200 dark:border-slate-800 text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
-                    <span class="material-symbols-outlined">chevron_right</span>
-                </button>
-            </div>
-        </main>
-        <!-- Footer -->
-        <footer
-            class="mt-20 border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 px-6 md:px-16 lg:px-40 py-12">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
-                <div class="col-span-1 md:col-span-1">
-                    <div class="flex items-center gap-2 mb-4">
-                        <div class="bg-primary p-1 rounded text-white">
-                            <span class="material-symbols-outlined text-xl block">precision_manufacturing</span>
-                        </div>
-                        <span class="font-bold text-lg dark:text-white">UniFirst Robotics</span>
+            <div id="pagination" class="mt-16 flex items-center justify-center gap-2"></div>
+            <!-- <button
+                class="w-10 h-10 flex items-center justify-center rounded-lg border border-slate-200 dark:border-slate-800 text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+                <span class="material-symbols-outlined">chevron_left</span>
+            </button>
+            <button
+                class="w-10 h-10 flex items-center justify-center rounded-lg bg-primary text-white font-bold">1</button>
+            <button
+                class="w-10 h-10 flex items-center justify-center rounded-lg border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">2</button>
+            <button
+                class="w-10 h-10 flex items-center justify-center rounded-lg border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">3</button>
+            <span class="px-2 text-slate-500">...</span>
+            <button
+                class="w-10 h-10 flex items-center justify-center rounded-lg border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">12</button>
+            <button
+                class="w-10 h-10 flex items-center justify-center rounded-lg border border-slate-200 dark:border-slate-800 text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+                <span class="material-symbols-outlined">chevron_right</span>
+            </button> -->
+    </div>
+    </main>
+    <!-- Footer -->
+    <footer
+        class="mt-20 border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 px-6 md:px-16 lg:px-40 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+            <div class="col-span-1 md:col-span-1">
+                <div class="flex items-center gap-2 mb-4">
+                    <div class="bg-primary p-1 rounded text-white">
+                        <span class="material-symbols-outlined text-xl block">precision_manufacturing</span>
                     </div>
-                    <p class="text-sm text-slate-500 dark:text-slate-400">Leading the next generation of engineers
-                        through cutting-edge robotics education and industrial research.</p>
+                    <span class="font-bold text-lg dark:text-white">UniFirst Robotics</span>
                 </div>
-                <div>
-                    <h4 class="font-bold text-slate-900 dark:text-white mb-4">Programs</h4>
-                    <ul class="space-y-2 text-sm text-slate-500 dark:text-slate-400">
-                        <li><a class="hover:text-primary transition-colors" href="#">Undergraduate</a></li>
-                        <li><a class="hover:text-primary transition-colors" href="#">Graduate School</a></li>
-                        <li><a class="hover:text-primary transition-colors" href="#">Online Certifications</a></li>
-                        <li><a class="hover:text-primary transition-colors" href="#">Summer Workshops</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-bold text-slate-900 dark:text-white mb-4">Resources</h4>
-                    <ul class="space-y-2 text-sm text-slate-500 dark:text-slate-400">
-                        <li><a class="hover:text-primary transition-colors" href="#">Lab Access</a></li>
-                        <li><a class="hover:text-primary transition-colors" href="#">Documentation</a></li>
-                        <li><a class="hover:text-primary transition-colors" href="#">Job Board</a></li>
-                        <li><a class="hover:text-primary transition-colors" href="#">Alumni Network</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-bold text-slate-900 dark:text-white mb-4">Newsletter</h4>
-                    <p class="text-xs text-slate-500 dark:text-slate-400 mb-3">Get the latest robotics news and course
-                        updates.</p>
-                    <div class="flex gap-2">
-                        <input
-                            class="bg-slate-100 dark:bg-slate-800 border-none rounded-lg text-xs w-full focus:ring-primary"
-                            placeholder="Email" type="email" />
-                        <button class="bg-primary p-2 rounded-lg text-white">
-                            <span class="material-symbols-outlined text-sm">send</span>
-                        </button>
-                    </div>
+                <p class="text-sm text-slate-500 dark:text-slate-400">Leading the next generation of engineers
+                    through cutting-edge robotics education and industrial research.</p>
+            </div>
+            <div>
+                <h4 class="font-bold text-slate-900 dark:text-white mb-4">Programs</h4>
+                <ul class="space-y-2 text-sm text-slate-500 dark:text-slate-400">
+                    <li><a class="hover:text-primary transition-colors" href="#">Undergraduate</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="#">Graduate School</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="#">Online Certifications</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="#">Summer Workshops</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-slate-900 dark:text-white mb-4">Resources</h4>
+                <ul class="space-y-2 text-sm text-slate-500 dark:text-slate-400">
+                    <li><a class="hover:text-primary transition-colors" href="#">Lab Access</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="#">Documentation</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="#">Job Board</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="#">Alumni Network</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-slate-900 dark:text-white mb-4">Newsletter</h4>
+                <p class="text-xs text-slate-500 dark:text-slate-400 mb-3">Get the latest robotics news and course
+                    updates.</p>
+                <div class="flex gap-2">
+                    <input
+                        class="bg-slate-100 dark:bg-slate-800 border-none rounded-lg text-xs w-full focus:ring-primary"
+                        placeholder="Email" type="email" />
+                    <button class="bg-primary p-2 rounded-lg text-white">
+                        <span class="material-symbols-outlined text-sm">send</span>
+                    </button>
                 </div>
             </div>
-            <div
-                class="mt-12 pt-8 border-t border-slate-100 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
-                <p>© 2024 UniFirst University Robotics Laboratory. All rights reserved.</p>
-                <div class="flex gap-6">
-                    <a class="hover:text-primary" href="#">Privacy Policy</a>
-                    <a class="hover:text-primary" href="#">Terms of Service</a>
-                    <a class="hover:text-primary" href="#">Cookie Settings</a>
-                </div>
+        </div>
+        <div
+            class="mt-12 pt-8 border-t border-slate-100 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
+            <p>© 2024 UniFirst University Robotics Laboratory. All rights reserved.</p>
+            <div class="flex gap-6">
+                <a class="hover:text-primary" href="#">Privacy Policy</a>
+                <a class="hover:text-primary" href="#">Terms of Service</a>
+                <a class="hover:text-primary" href="#">Cookie Settings</a>
             </div>
-        </footer>
+        </div>
+    </footer>
     </div>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
@@ -536,6 +487,82 @@
         function toggleDropdown() {
             document.getElementById("mobile-dropdown").classList.toggle("hidden");
         }
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const cards = document.querySelectorAll(".course-card");
+            const filterButtons = document.querySelectorAll(".filter-btn");
+            const paginationContainer = document.getElementById("pagination");
+
+            let currentFilter = "all";
+            let currentPage = 1;
+            const cardsPerPage = 3;
+
+            function getFilteredCards() {
+                return Array.from(cards).filter(card => {
+                    return currentFilter === "all" || card.dataset.level === currentFilter;
+                });
+            }
+
+            function renderCards() {
+                const filtered = getFilteredCards();
+
+                cards.forEach(card => card.style.display = "none");
+
+                const start = (currentPage - 1) * cardsPerPage;
+                const end = start + cardsPerPage;
+
+                filtered.slice(start, end).forEach(card => {
+                    card.style.display = "flex";
+                });
+
+                renderPagination(filtered.length);
+            }
+
+            function renderPagination(totalItems) {
+                const totalPages = Math.ceil(totalItems / cardsPerPage);
+                paginationContainer.innerHTML = "";
+
+                if (totalPages <= 1) return;
+
+                for (let i = 1; i <= totalPages; i++) {
+                    const btn = document.createElement("button");
+                    btn.textContent = i;
+                    btn.className =
+                        "w-10 h-10 flex items-center justify-center rounded-lg border border-slate-200 dark:border-slate-800";
+
+                    if (i === currentPage) {
+                        btn.classList.add("bg-primary", "text-white");
+                    }
+
+                    btn.addEventListener("click", function () {
+                        currentPage = i;
+                        renderCards();
+                    });
+
+                    paginationContainer.appendChild(btn);
+                }
+            }
+
+            filterButtons.forEach(button => {
+                button.addEventListener("click", function () {
+
+                    filterButtons.forEach(btn => {
+                        btn.classList.remove("bg-primary", "text-white");
+                        btn.classList.add("bg-white");
+                    });
+
+                    this.classList.remove("bg-white");
+                    this.classList.add("bg-primary", "text-white");
+
+                    currentFilter = this.dataset.filter;
+                    currentPage = 1;
+
+                    renderCards();
+                });
+            });
+
+            renderCards();
+        });
     </script>
 </body>
 
